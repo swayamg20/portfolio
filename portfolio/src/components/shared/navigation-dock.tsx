@@ -73,14 +73,14 @@ const NAVIGATION_DATA = {
   ],
 };
 
-export function NavigationDock() {
+// Main Pages Navigation Dock (Center)
+export function MainNavigationDock() {
   const pathname = usePathname();
 
   return (
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed top-0 left-1/2 -translate-x-1/2 z-50">
       <TooltipProvider>
-        <Dock direction="middle" className="px-4 py-3 gap-8">
-          {/* Section 1: Page Navigation */}
+        <Dock direction="middle" className="px-4 py-3 gap-6">
           {NAVIGATION_DATA.pages.map((page) => {
             const isActive = pathname === page.href;
             return (
@@ -108,10 +108,19 @@ export function NavigationDock() {
               </DockIcon>
             );
           })}
+        </Dock>
+      </TooltipProvider>
+    </div>
+  );
+}
 
-          <Separator orientation="vertical" className="h-full mx-2" />
-
-          {/* Section 2: Social Links */}
+// Social & Theme Navigation Dock (Right)
+export function SocialNavigationDock() {
+  return (
+    <div className="fixed top-0 right-4 z-50">
+      <TooltipProvider>
+        <Dock direction="middle" className="px-4 py-3 gap-0">
+          {/* Social Links */}
           {NAVIGATION_DATA.social.map((social) => (
             <DockIcon key={social.name}>
               <Tooltip>
@@ -138,7 +147,7 @@ export function NavigationDock() {
 
           <Separator orientation="vertical" className="h-full mx-2" />
 
-          {/* Section 3: Theme Toggler */}
+          {/* Theme Toggler */}
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -157,5 +166,15 @@ export function NavigationDock() {
         </Dock>
       </TooltipProvider>
     </div>
+  );
+}
+
+// Legacy export for backward compatibility (uses both docks)
+export function NavigationDock() {
+  return (
+    <>
+      <MainNavigationDock />
+      <SocialNavigationDock />
+    </>
   );
 }

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-foreground">
+    <main className="min-h-screen bg-background text-foreground">
       <NavigationDock />
 
       {/* Introduction Section with Animated Grid Pattern */}
@@ -32,7 +32,7 @@ export default function Home() {
           {/* Hyper Text Name and Title */}
           <div className="mb-4 space-y-4">
             <TextAnimate 
-              className="text-6xl md:text-8xl font-bold text-white"
+              className="text-6xl md:text-8xl font-bold text-foreground"
               animation="blurIn"
               by="character"
               duration={0.8}
@@ -42,7 +42,7 @@ export default function Home() {
               Swayam Gupta
             </TextAnimate>
             <TextAnimate 
-              className="text-3xl md:text-4xl font-medium text-gray-300"
+              className="text-3xl md:text-4xl font-medium text-muted-foreground"
               animation="blurInUp"
               by="character"
               // delay={300}

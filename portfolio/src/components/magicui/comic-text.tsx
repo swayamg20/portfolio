@@ -20,8 +20,9 @@ export function ComicText({
     throw new Error("children must be a string");
   }
 
-  const dotColor = "#EF4444";
-  const backgroundColor = "#FACC15";
+  const dotColor = "hsl(var(--destructive))";
+  const backgroundColor = "hsl(var(--primary))";
+  const strokeColor = "hsl(var(--foreground))";
 
   return (
     <motion.div
@@ -30,11 +31,11 @@ export function ComicText({
         fontSize: `${fontSize}rem`,
         fontFamily: "'Bangers', 'Comic Sans MS', 'Impact', sans-serif",
         fontWeight: "900",
-        WebkitTextStroke: `${fontSize * 0.35}px #000000`, // Thick black outline
+        WebkitTextStroke: `${fontSize * 0.35}px ${strokeColor}`, // Theme-aware outline
         transform: "skewX(-10deg)",
         textTransform: "uppercase",
         filter: `
-          drop-shadow(5px 5px 0px #000000) 
+          drop-shadow(5px 5px 0px ${strokeColor}) 
           drop-shadow(3px 3px 0px ${dotColor})
         `,
         backgroundColor: backgroundColor,

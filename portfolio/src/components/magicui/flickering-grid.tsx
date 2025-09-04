@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import React, {
   useCallback,
   useEffect,
@@ -24,34 +25,46 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   squareSize = 4,
   gridGap = 6,
   flickerChance = 0.3,
-  color = "rgb(0, 0, 0)",
+  color,
   width,
   height,
   className,
   maxOpacity = 0.3,
   ...props
 }) => {
+  const { theme } = useTheme();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
 
+  // Get theme-aware color
+  const themeColor = useMemo(() => {
+    if (color) return color;
+    // Return appropriate colors based on theme
+    return theme === 'dark' ? 'rgb(156, 163, 175)' : 'rgb(107, 114, 128)'; // gray-400 : gray-500
+  }, [color, theme]);
+
   const memoizedColor = useMemo(() => {
     const toRGBA = (color: string) => {
       if (typeof window === "undefined") {
-        return `rgba(0, 0, 0,`;
+        // Use a neutral fallback for SSR
+        return `rgba(128, 128, 128,`;
       }
       const canvas = document.createElement("canvas");
       canvas.width = canvas.height = 1;
       const ctx = canvas.getContext("2d");
-      if (!ctx) return "rgba(255, 0, 0,";
+      if (!ctx) {
+        // Fallback to a neutral color instead of red
+        return "rgba(128, 128, 128,";
+      }
       ctx.fillStyle = color;
       ctx.fillRect(0, 0, 1, 1);
       const [r, g, b] = Array.from(ctx.getImageData(0, 0, 1, 1).data);
       return `rgba(${r}, ${g}, ${b},`;
     };
-    return toRGBA(color);
-  }, [color]);
+    return toRGBA(themeColor);
+  }, [themeColor]);
 
   const setupCanvas = useCallback(
     (canvas: HTMLCanvasElement, width: number, height: number) => {

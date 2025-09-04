@@ -46,15 +46,16 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 mb-8 bg-transparent">
       <div className="relative group">
-        {/* Simple blur card */}
-        <div className="bg-transparent rounded-2xl p-6 md:p-8 
-                        shadow-2xl shadow-black/50
-                        hover:shadow-2xl hover:shadow-black/60 transition-all duration-300">
+        {/* Theme-aware card */}
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 
+                        shadow-2xl shadow-black/10 dark:shadow-black/50
+                        hover:shadow-2xl hover:shadow-black/20 dark:hover:shadow-black/60 
+                        hover:bg-card/70 transition-all duration-300">
           
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
                 <TextAnimate
-                  className="text-2xl md:text-3xl font-bold text-white mb-2"
+                  className="text-2xl md:text-3xl font-bold text-foreground mb-2"
                   animation="slideLeft"
                   by="word"
                   delay={0.1*index}
@@ -65,7 +66,7 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
                   {experience.role}
                 </TextAnimate>
                 <TextAnimate
-                  className="text-lg md:text-xl font-medium text-underline"
+                  className="text-lg md:text-xl font-medium text-primary underline decoration-primary/30"
                   animation="slideLeft"
                   by="word"
                 //   duration={0.6}
@@ -77,7 +78,7 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
                 </TextAnimate>
               </div>
               <TextAnimate
-                className="text-gray-300 font-medium mt-2 md:mt-0"
+                className="text-muted-foreground font-medium mt-2 md:mt-0"
                 animation="slideLeft"
                 by="character"
                 delay={0.1*index}
@@ -90,7 +91,7 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
             </div>
             
             <TextAnimate
-              className="text-gray-200 leading-relaxed mb-6"
+              className="text-foreground/80 leading-relaxed mb-6"
               animation="slideLeft"
               by="text"
               delay={0.2*index}
@@ -105,8 +106,9 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
               {experience.technologies.map((tech, techIndex) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 bg-white/20 backdrop-blur-sm border border-white/30 
-                           rounded-full text-sm text-white font-medium"
+                  className="px-3 py-1 bg-secondary/80 backdrop-blur-sm border border-border 
+                           rounded-full text-sm text-secondary-foreground font-medium
+                           hover:bg-secondary transition-colors"
                   style={{
                     animationDelay: `${index * 200 + 400 + techIndex * 50}ms`
                   }}
@@ -124,22 +126,21 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden 
-                       bg-black">       
+                       bg-background">       
       {/* Multiple background layers for depth */}
       
-      <FlickeringGrid
+      {/* <FlickeringGrid
         className="absolute inset-0 z-0"
         squareSize={4}
         gridGap={6}
-        color="#6B7280"
         maxOpacity={0.15}
         flickerChance={0.2}
-      />
+      /> */}
       
       {/* Section Header */}
-      <div className="relative z-10 text-center mb-12 px-4">
+      <div className="relative z-10 text-center mb-12 mt-12 px-4">
         <TextAnimate
-          className="text-4xl md:text-6xl font-bold text-white mb-4"
+          className="text-4xl md:text-6xl font-bold text-foreground mb-4"
           animation="blurInUp"
           by="word"
           duration={0.8}
@@ -149,10 +150,10 @@ export function HeroSection() {
           Experience Journey
         </TextAnimate>
         <TextAnimate
-          className="text-xl text-gray-300 max-w-2xl mx-auto"
+          className="text-xl text-muted-foreground max-w-2xl mx-auto"
           animation="blurInUp"
           by="word"
-          delay={300}
+        //   delay={300}
           duration={0.6}
           startOnView={true}
           once={true}

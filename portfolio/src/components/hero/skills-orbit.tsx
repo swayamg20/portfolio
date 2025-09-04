@@ -12,7 +12,7 @@ const techStack = {
   ],
   frameworks: [
     { name: "React", icon: "⚛️", color: "text-cyan-500" },
-    { name: "Next.js", icon: "▲", color: "text-black dark:text-white" },
+    { name: "Next.js", icon: "▲", color: "text-foreground" },
     { name: "Node.js", icon: "📗", color: "text-green-600" },
     { name: "Express", icon: "🚂", color: "text-gray-600" },
   ],
