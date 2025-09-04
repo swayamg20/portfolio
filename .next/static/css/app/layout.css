@@ -724,6 +724,9 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.inline-block {
+  display: inline-block;
+}
 .flex {
   display: flex;
 }
@@ -913,6 +916,9 @@ video {
 .bg-secondary {
   background-color: hsl(var(--secondary));
 }
+.bg-transparent {
+  background-color: transparent;
+}
 .fill-current {
   fill: currentColor;
 }
@@ -1034,6 +1040,9 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.underline {
+  text-decoration-line: underline;
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
