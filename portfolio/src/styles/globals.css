@@ -59,6 +59,7 @@
   }
   .theme {
     --animate-shine: shine var(--duration) infinite linear;
+    --animate-gradient: gradient 8s linear infinite;
   }
 }
 
@@ -83,4 +84,14 @@
     background-position: 0% 0%;
     }
   }
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+    }
+  }
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }
