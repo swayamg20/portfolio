@@ -1,0 +1,262 @@
+---
+alwaysApply: true
+---
+
+# Development Best Practices
+
+## Component Implementation Workflow
+
+### 1. Research Phase
+- **Always check markdown first**: `cat portfolio/content/component-name.md`
+- **Read complete documentation** including installation, examples, and props
+- **Note required CSS animations** and dependencies
+- **Check for video demos** to understand expected behavior
+
+### 2. Installation Phase
+```bash
+# Preferred: CLI installation
+npx shadcn@latest add "https://magicui.design/r/component-name"
+
+# Alternative: Manual installation
+# Copy code from markdown and add required CSS
+```
+
+### 3. Implementation Phase
+```tsx
+// Use documented import path
+import { ComponentName } from "@/components/magicui/component-name";
+
+// Follow props table from markdown
+<ComponentName 
+  prop1="value1"
+  prop2="value2"
+  className="custom-classes"
+>
+  {/* Content as shown in examples */}
+</ComponentName>
+```
+
+### 4. CSS Integration
+- **Add animations** from markdown to `portfolio/src/styles/globals.css`
+- **Use exact CSS** provided in component documentation
+- **Check for CSS variables** and keyframes
+- **Test animations** work as expected
+
+## Code Quality Standards
+
+### TypeScript
+- **Use interfaces** for component props
+- **Define proper types** for all functions
+- **Leverage path aliases** (`@/components`, `@/utils`, etc.)
+- **Enable strict mode** for better type safety
+
+### React Patterns
+- **Functional components** with hooks
+- **Proper prop destructuring** and validation
+- **Memoization** for expensive operations
+- **Error boundaries** for component failures
+
+### Styling
+- **Tailwind CSS** as primary styling method
+- **CSS variables** for theming and customization
+- **Responsive design** with mobile-first approach
+- **Consistent spacing** and typography scales
+
+## File Organization
+
+### Component Structure
+```
+portfolio/src/components/
+├── magicui/                 # Magic UI components
+│   ├── marquee/
+│   │   ├── index.tsx       # Main component
+│   │   ├── types.ts        # TypeScript interfaces
+│   │   └── styles.css      # Component-specific styles
+│   └── rainbow-button/
+│       ├── index.tsx
+│       ├── types.ts
+│       └── styles.css
+└── ui/                      # Custom UI components
+    ├── layout/
+    ├── navigation/
+    └── common/
+```
+
+### Naming Conventions
+- **Components**: PascalCase (`Marquee.tsx`, `RainbowButton.tsx`)
+- **Files**: kebab-case (`marquee-demo.tsx`, `button-variants.tsx`)
+- **Directories**: kebab-case (`magic-ui/`, `ui-components/`)
+- **Constants**: UPPER_SNAKE_CASE (`DEFAULT_ANIMATION_DURATION`)
+
+## Testing and Validation
+
+### Component Testing
+- **Render components** with various prop combinations
+- **Test responsive behavior** across breakpoints
+- **Verify animations** work correctly
+- **Check accessibility** features
+
+### Integration Testing
+- **Test component interactions** within pages
+- **Verify routing** and navigation
+- **Check data flow** between components
+- **Test error states** and edge cases
+
+## Performance Considerations
+
+### Optimization
+- **Lazy load** heavy components
+- **Use React.memo** for expensive renders
+- **Optimize images** and assets
+- **Implement code splitting** for large bundles
+
+### Monitoring
+- **Track bundle size** and performance metrics
+- **Monitor runtime performance** in development
+- **Use React DevTools** for component analysis
+- **Profile animations** and interactions
+
+## Common Pitfalls to Avoid
+
+1. **Don't skip markdown reading** - Always check documentation first
+2. **Don't copy code blindly** - Understand what you're implementing
+3. **Don't forget CSS requirements** - Animations often need specific CSS
+4. **Don't ignore TypeScript errors** - Fix type issues promptly
+5. **Don't skip responsive testing** - Test on multiple screen sizes
+
+## Resources and References
+
+- **Magic UI Documentation**: https://magicui.design/docs/components/
+- **Next.js Documentation**: https://nextjs.org/docs
+- **Tailwind CSS**: https://tailwindcss.com/docs
+- **Framer Motion**: https://www.framer.com/motion/
+- **Component Markdowns**: `portfolio/content/` (71 components)
+# Development Best Practices
+
+## Component Implementation Workflow
+
+### 1. Research Phase
+- **Always check markdown first**: `cat portfolio/content/component-name.md`
+- **Read complete documentation** including installation, examples, and props
+- **Note required CSS animations** and dependencies
+- **Check for video demos** to understand expected behavior
+
+### 2. Installation Phase
+```bash
+# Preferred: CLI installation
+npx shadcn@latest add "https://magicui.design/r/component-name"
+
+# Alternative: Manual installation
+# Copy code from markdown and add required CSS
+```
+
+### 3. Implementation Phase
+```tsx
+// Use documented import path
+import { ComponentName } from "@/components/magicui/component-name";
+
+// Follow props table from markdown
+<ComponentName 
+  prop1="value1"
+  prop2="value2"
+  className="custom-classes"
+>
+  {/* Content as shown in examples */}
+</ComponentName>
+```
+
+### 4. CSS Integration
+- **Add animations** from markdown to `portfolio/src/styles/globals.css`
+- **Use exact CSS** provided in component documentation
+- **Check for CSS variables** and keyframes
+- **Test animations** work as expected
+
+## Code Quality Standards
+
+### TypeScript
+- **Use interfaces** for component props
+- **Define proper types** for all functions
+- **Leverage path aliases** (`@/components`, `@/utils`, etc.)
+- **Enable strict mode** for better type safety
+
+### React Patterns
+- **Functional components** with hooks
+- **Proper prop destructuring** and validation
+- **Memoization** for expensive operations
+- **Error boundaries** for component failures
+
+### Styling
+- **Tailwind CSS** as primary styling method
+- **CSS variables** for theming and customization
+- **Responsive design** with mobile-first approach
+- **Consistent spacing** and typography scales
+
+## File Organization
+
+### Component Structure
+```
+portfolio/src/components/
+├── magicui/                 # Magic UI components
+│   ├── marquee/
+│   │   ├── index.tsx       # Main component
+│   │   ├── types.ts        # TypeScript interfaces
+│   │   └── styles.css      # Component-specific styles
+│   └── rainbow-button/
+│       ├── index.tsx
+│       ├── types.ts
+│       └── styles.css
+└── ui/                      # Custom UI components
+    ├── layout/
+    ├── navigation/
+    └── common/
+```
+
+### Naming Conventions
+- **Components**: PascalCase (`Marquee.tsx`, `RainbowButton.tsx`)
+- **Files**: kebab-case (`marquee-demo.tsx`, `button-variants.tsx`)
+- **Directories**: kebab-case (`magic-ui/`, `ui-components/`)
+- **Constants**: UPPER_SNAKE_CASE (`DEFAULT_ANIMATION_DURATION`)
+
+## Testing and Validation
+
+### Component Testing
+- **Render components** with various prop combinations
+- **Test responsive behavior** across breakpoints
+- **Verify animations** work correctly
+- **Check accessibility** features
+
+### Integration Testing
+- **Test component interactions** within pages
+- **Verify routing** and navigation
+- **Check data flow** between components
+- **Test error states** and edge cases
+
+## Performance Considerations
+
+### Optimization
+- **Lazy load** heavy components
+- **Use React.memo** for expensive renders
+- **Optimize images** and assets
+- **Implement code splitting** for large bundles
+
+### Monitoring
+- **Track bundle size** and performance metrics
+- **Monitor runtime performance** in development
+- **Use React DevTools** for component analysis
+- **Profile animations** and interactions
+
+## Common Pitfalls to Avoid
+
+1. **Don't skip markdown reading** - Always check documentation first
+2. **Don't copy code blindly** - Understand what you're implementing
+3. **Don't forget CSS requirements** - Animations often need specific CSS
+4. **Don't ignore TypeScript errors** - Fix type issues promptly
+5. **Don't skip responsive testing** - Test on multiple screen sizes
+
+## Resources and References
+
+- **Magic UI Documentation**: https://magicui.design/docs/components/
+- **Next.js Documentation**: https://nextjs.org/docs
+- **Tailwind CSS**: https://tailwindcss.com/docs
+- **Framer Motion**: https://www.framer.com/motion/
+- **Component Markdowns**: `portfolio/content/` (71 components)

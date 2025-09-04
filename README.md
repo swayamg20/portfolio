@@ -1,118 +1,144 @@
-# Portfolio Website - Magic UI Components
+# Magic UI Portfolio Project
 
-A beautiful portfolio website showcasing all the Magic UI components we've downloaded. Built with Next.js, TypeScript, and Tailwind CSS.
+This repository contains tools to generate sitemaps for the [Magic UI](https://magicui.design) website and a portfolio project showcasing all the components.
 
-## 🚀 Features
+## Features
 
-- **Component Showcase**: Display all 71 Magic UI components
-- **Category Organization**: Organized by component type (buttons, animations, effects, etc.)
-- **Responsive Design**: Mobile-first responsive layout
-- **Modern Tech Stack**: Next.js 14, TypeScript, Tailwind CSS
-- **Smooth Animations**: Framer Motion for beautiful interactions
+- **Complete Coverage**: Generates sitemaps for all components, templates, and pages
+- **Modular Generation**: Generate specific sitemaps or all at once
+- **SEO Optimized**: Includes proper XML structure, lastmod dates, and priorities
+- **Robots.txt**: Automatically generates robots.txt with sitemap references
+- **Markdown Downloader**: Downloads all component documentation markdown files
 
-## 📁 Project Structure
+## Repository Structure
 
 ```
-portfolio/
-├── src/
-│   ├── app/                 # Next.js app directory
-│   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Home page
-│   ├── components/          # React components
-│   ├── styles/             # CSS and styling
-│   │   └── globals.css     # Global styles with Tailwind
-│   └── utils/              # Utility functions
-│       └── markdown.ts     # Markdown processing utilities
-├── content/                 # Component markdown files (71 components)
-├── public/                  # Static assets
-├── package.json            # Dependencies and scripts
-├── tailwind.config.js      # Tailwind configuration
-├── tsconfig.json           # TypeScript configuration
-└── next.config.js          # Next.js configuration
+├── scripts/                   # Utility scripts
+│   ├── generate-sitemaps.js  # Sitemap generation
+│   ├── download-markdowns.js # Component markdown downloader
+│   ├── sitemaps/            # Generated sitemap files
+│   ├── sitemap.xml          # Main sitemap index
+│   └── robots.txt           # SEO robots file
+├── portfolio/                # Portfolio website project
+│   ├── src/                 # Next.js source code
+│   ├── content/             # Component markdown files (71 components)
+│   ├── package.json         # Portfolio dependencies
+│   └── README.md            # Portfolio documentation
+└── README.md                # This file
 ```
 
-## 🛠️ Tech Stack
+## Installation
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Content**: Markdown files with frontmatter
-
-## 📦 Installation
-
+### For Utility Scripts
 ```bash
-cd portfolio
 npm install
 ```
 
-## 🚀 Development
+## Usage
 
+### From Root Directory (Recommended)
 ```bash
+# Generate sitemaps
+npm run generate               # All sitemaps
+npm run generate:components    # Components only
+npm run generate:templates     # Templates only
+
+# Download component markdowns
+npm run download               # Download all components
+npm run download:components    # Same as above
+
+# Portfolio management
+npm run portfolio:install      # Install portfolio dependencies
+npm run portfolio:dev         # Start portfolio development server
+npm run portfolio:build       # Build portfolio for production
+npm run portfolio:start       # Start portfolio production server
+```
+
+### Direct Execution
+```bash
+# Utility scripts
+node scripts/generate-sitemaps.js
+node scripts/download-markdowns.js
+
+# Portfolio (from portfolio directory)
+cd portfolio
+npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+## Generated Files
 
-## 🏗️ Build
-
-```bash
-npm run build
-npm start
+### Sitemaps (in scripts/ folder)
+```
+├── sitemap.xml                    # Main sitemap index
+├── robots.txt                     # SEO robots file
+└── sitemaps/
+    ├── components-sitemap.xml     # All UI components
+    ├── special-effects-sitemap.xml # Special effects components
+    ├── text-animations-sitemap.xml # Text animation components
+    ├── buttons-sitemap.xml        # Button components
+    ├── backgrounds-sitemap.xml    # Background components
+    ├── device-mocks-sitemap.xml   # Device mock components
+    ├── animations-sitemap.xml     # Animation components
+    ├── templates-sitemap.xml      # Template pages
+    └── pages-sitemap.xml          # Main pages
 ```
 
-## 📝 Available Scripts
+### Component Markdowns (in portfolio/content/ folder)
+```
+├── marquee.md                # Marquee component docs
+├── rainbow-button.md         # Rainbow button docs
+├── spinning-text.md          # Spinning text docs
+└── ... (71 total components)
+```
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run generate` - Generate sitemaps (from parent scripts folder)
-- `npm run download` - Download component markdowns (from parent scripts folder)
+## Sitemap Structure
 
-## 🎨 Component Categories
+The script generates sitemaps covering:
 
-The portfolio will showcase components organized into these categories:
+- **Components** (50+ components)
+- **Special Effects** (12 effects)
+- **Text Animations** (18 animations)
+- **Buttons** (7 button types)
+- **Backgrounds** (9 background patterns)
+- **Device Mocks** (3 device types)
+- **Animations** (1 animation type)
+- **Templates** (9 template types)
+- **Pages** (4 main pages)
 
-- **Components** (20+): Core UI components like marquee, terminal, bento-grid
-- **Special Effects** (12): Visual effects like meteors, confetti, particles
-- **Text Animations** (18): Text-based animations like spinning-text, comic-text
-- **Buttons** (7): Interactive button components like rainbow-button
-- **Backgrounds** (9): Background patterns and effects
-- **Device Mocks** (3): Device frame components
-- **Animations** (1): General animation components
+## Markdown Downloader
 
-## 🔧 Configuration
+The downloader script fetches all component documentation from [Magic UI](https://magicui.design) and saves them as markdown files:
 
-- **Tailwind**: Custom color scheme and animations
-- **TypeScript**: Strict mode with path aliases
-- **Next.js**: App directory with image optimization
-- **PostCSS**: Autoprefixer and Tailwind processing
+- **71 component markdowns** downloaded
+- **Organized by category** (components, effects, animations, etc.)
+- **Complete documentation** with code examples and usage
+- **Batch processing** with rate limiting to be respectful to the server
+- **Skip existing files** to avoid re-downloading
 
-## 📱 Responsive Design
+## Customization
 
-- Mobile-first approach
-- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
-- Flexible grid system
-- Touch-friendly interactions
+Edit `SITE_STRUCTURE` in `generate-sitemaps.js` to:
+- Change the base URL
+- Add/remove components
+- Modify URL paths
+- Adjust priorities and change frequencies
 
-## 🎯 Next Steps
+## Output Format
 
-1. **Component Grid**: Create a responsive grid to display all components
-2. **Category Pages**: Build dedicated pages for each component category
-3. **Component Detail**: Individual component showcase pages
-4. **Search & Filter**: Add search functionality and filtering options
-5. **Interactive Demos**: Live component demonstrations
-6. **Dark Mode**: Toggle between light and dark themes
+Each sitemap follows the standard XML sitemap protocol with:
+- `<loc>`: Full URL to the page
+- `<lastmod>`: Current date
+- `<changefreq>`: Weekly updates
+- `<priority>`: 0.8 for all pages
 
-## 📚 Resources
+## SEO Benefits
 
-- [Magic UI Documentation](https://magicui.design/docs/components/)
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Framer Motion Documentation](https://www.framer.com/motion/)
+- **Search Engine Discovery**: Helps search engines find all pages
+- **Indexing Speed**: Faster crawling and indexing
+- **Content Organization**: Clear structure for search engines
+- **Update Tracking**: Lastmod dates for content freshness
 
-## 📄 License
+## License
 
 MIT

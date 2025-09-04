@@ -1,0 +1,195 @@
+---
+alwaysApply: false
+---
+# Project Structure and Organization
+
+## Repository Layout
+```
+├── .cursor/rules/           # Cursor AI rules and guidelines
+├── scripts/                 # Utility scripts
+│   ├── generate-sitemaps.js # Sitemap generation
+│   ├── download-markdowns.js # Component markdown downloader
+│   ├── sitemaps/           # Generated sitemap files
+│   ├── sitemap.xml         # Main sitemap index
+│   └── robots.txt          # SEO robots file
+├── portfolio/               # Portfolio website project
+│   ├── src/                # Next.js source code
+│   │   ├── app/           # App router (layout.tsx, page.tsx)
+│   │   ├── components/    # React components
+│   │   ├── styles/        # CSS with Tailwind setup
+│   │   └── utils/         # Utility functions
+│   ├── content/            # Component markdown files (71 components)
+│   ├── public/             # Static assets
+│   ├── package.json        # Portfolio dependencies
+│   ├── next.config.js      # Next.js configuration
+│   ├── tailwind.config.js  # Tailwind CSS setup
+│   ├── tsconfig.json       # TypeScript configuration
+│   └── postcss.config.js   # PostCSS setup
+├── package.json             # Root dependencies and scripts
+├── .gitignore              # Git ignore rules
+└── README.md               # Project documentation
+```
+
+## File Organization Principles
+
+### Root Level
+- **Utility scripts** for sitemap generation and markdown downloading
+- **Project management** scripts and dependencies
+- **Documentation** and project overview
+
+### Portfolio Level
+- **Self-contained** Next.js application
+- **Independent** package.json and dependencies
+- **Clean separation** from utility scripts
+
+### Content Organization
+- **71 component markdowns** in `portfolio/content/`
+- **Categorized by type** (components, effects, animations, etc.)
+- **Complete documentation** with code examples
+
+## Development Workflow
+
+### From Root Directory
+```bash
+# Generate sitemaps
+npm run generate
+npm run generate:components
+
+# Download components
+npm run download
+
+# Portfolio management
+npm run portfolio:install
+npm run portfolio:dev
+npm run portfolio:build
+```
+
+### From Portfolio Directory
+```bash
+cd portfolio
+npm install
+npm run dev
+npm run build
+```
+
+## Key Directories
+
+### `scripts/` - Utility Tools
+- **generate-sitemaps.js**: Creates SEO sitemaps for Magic UI
+- **download-markdowns.js**: Downloads component documentation
+- **sitemaps/**: Generated XML sitemap files
+
+### `portfolio/content/` - Component Library
+- **71 markdown files** with complete component documentation
+- **Installation instructions** and code examples
+- **Props documentation** and usage patterns
+
+### `portfolio/src/` - Application Code
+- **app/**: Next.js app router pages
+- **components/**: React component implementations
+- **styles/**: CSS and Tailwind configuration
+- **utils/**: Helper functions and utilities
+
+## Best Practices
+
+1. **Keep utilities separate** from portfolio application
+2. **Use workspace scripts** for cross-directory operations
+3. **Maintain clean separation** between tools and app
+4. **Document everything** in README files
+5. **Follow consistent** file naming conventions
+# Project Structure and Organization
+
+## Repository Layout
+```
+├── .cursor/rules/           # Cursor AI rules and guidelines
+├── scripts/                 # Utility scripts
+│   ├── generate-sitemaps.js # Sitemap generation
+│   ├── download-markdowns.js # Component markdown downloader
+│   ├── sitemaps/           # Generated sitemap files
+│   ├── sitemap.xml         # Main sitemap index
+│   └── robots.txt          # SEO robots file
+├── portfolio/               # Portfolio website project
+│   ├── src/                # Next.js source code
+│   │   ├── app/           # App router (layout.tsx, page.tsx)
+│   │   ├── components/    # React components
+│   │   ├── styles/        # CSS with Tailwind setup
+│   │   └── utils/         # Utility functions
+│   ├── content/            # Component markdown files (71 components)
+│   ├── public/             # Static assets
+│   ├── package.json        # Portfolio dependencies
+│   ├── next.config.js      # Next.js configuration
+│   ├── tailwind.config.js  # Tailwind CSS setup
+│   ├── tsconfig.json       # TypeScript configuration
+│   └── postcss.config.js   # PostCSS setup
+├── package.json             # Root dependencies and scripts
+├── .gitignore              # Git ignore rules
+└── README.md               # Project documentation
+```
+
+## File Organization Principles
+
+### Root Level
+- **Utility scripts** for sitemap generation and markdown downloading
+- **Project management** scripts and dependencies
+- **Documentation** and project overview
+
+### Portfolio Level
+- **Self-contained** Next.js application
+- **Independent** package.json and dependencies
+- **Clean separation** from utility scripts
+
+### Content Organization
+- **71 component markdowns** in `portfolio/content/`
+- **Categorized by type** (components, effects, animations, etc.)
+- **Complete documentation** with code examples
+
+## Development Workflow
+
+### From Root Directory
+```bash
+# Generate sitemaps
+npm run generate
+npm run generate:components
+
+# Download components
+npm run download
+
+# Portfolio management
+npm run portfolio:install
+npm run portfolio:dev
+npm run portfolio:build
+```
+
+### From Portfolio Directory
+```bash
+cd portfolio
+npm install
+npm run dev
+npm run build
+```
+
+## Key Directories
+
+### `scripts/` - Utility Tools
+- **generate-sitemaps.js**: Creates SEO sitemaps for Magic UI
+- **download-markdowns.js**: Downloads component documentation
+- **sitemaps/**: Generated XML sitemap files
+
+### `portfolio/content/` - Component Library
+- **71 markdown files** with complete component documentation
+- **Installation instructions** and code examples
+- **Props documentation** and usage patterns
+
+### `portfolio/src/` - Application Code
+- **app/**: Next.js app router pages
+- **components/**: React component implementations
+- **styles/**: CSS and Tailwind configuration
+- **utils/**: Helper functions and utilities
+
+## Best Practices
+
+1. **Keep utilities separate** from portfolio application
+2. **Use workspace scripts** for cross-directory operations
+3. **Maintain clean separation** between tools and app
+4. **Document everything** in README files
+5. **Follow consistent** file naming conventions

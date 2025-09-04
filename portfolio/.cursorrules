@@ -1,0 +1,70 @@
+# Portfolio Website - Magic UI Components
+
+## Project Context
+This is a Next.js 14 portfolio website showcasing Magic UI components. The `content/` folder contains 71 component markdown files with complete documentation.
+
+## Quick Component Reference
+
+### When Building Components
+1. **Check the markdown first**: `cat content/component-name.md`
+2. **Copy installation code**: Use the exact code from markdown
+3. **Add required CSS**: Check markdown for animation requirements
+4. **Follow props table**: Use documented configuration options
+
+### Component Categories Available
+- **Components** (20+): marquee, terminal, bento-grid, etc.
+- **Special Effects** (12): meteors, confetti, particles, etc.
+- **Text Animations** (18): spinning-text, comic-text, rainbow-button, etc.
+- **Buttons** (7): rainbow-button, shimmer-button, etc.
+- **Backgrounds** (9): warp-background, grid-patterns, etc.
+- **Device Mocks** (3): safari, iphone-15-pro, android
+- **Animations** (1): blur-fade
+
+### Implementation Pattern
+```tsx
+// 1. Check markdown for component details
+// 2. Install via CLI or copy manual code
+// 3. Import and use with documented props
+import { ComponentName } from "@/components/magicui/component-name";
+
+<ComponentName 
+  // Use props from markdown documentation
+  prop1="value1"
+>
+  {/* Content as shown in examples */}
+</ComponentName>
+```
+
+### CSS Requirements
+- Add animations from markdown to `src/styles/globals.css`
+- Use exact CSS provided in component documentation
+- Check for required CSS variables and keyframes
+
+### File Structure
+- **Components**: `src/components/` (create Magic UI components here)
+- **Pages**: `src/app/` (Next.js app router)
+- **Styles**: `src/styles/globals.css` (add component CSS here)
+- **Utils**: `src/utils/markdown.ts` (component processing utilities)
+- **Content**: `content/` (71 component markdown files)
+
+### Common Commands
+```bash
+# View component documentation
+cat content/component-name.md
+
+# Search components by feature
+grep -r "video:" content/
+
+# Check installation steps
+grep -A 20 "Installation" content/component-name.md
+```
+
+## Development Workflow
+1. **Choose component** from content folder
+2. **Read markdown** for complete documentation
+3. **Copy code** from installation examples
+4. **Add CSS** from markdown to globals.css
+5. **Implement component** in src/components/
+6. **Test and showcase** in portfolio pages
+
+Remember: The markdown files contain everything you need to implement each component!
