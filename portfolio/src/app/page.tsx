@@ -216,8 +216,10 @@ export default function Home() {
       <PDFModal
         isOpen={isResumeModalOpen}
         onClose={() => setIsResumeModalOpen(false)}
-        pdfUrl="/resume.pdf"
+        pdfUrl="/portolio/resume.pdf"
         title="Swayam Gupta - Resume"
+        githubUrl="https://github.com/swayamg20/resume"
+        driveUrl="https://drive.google.com/file/d/13r_8pPvV9I1T3d6l489x7d2-fT7-ZVQq/view?usp=sharing"
       />
     </main>
   )

@@ -62,16 +62,16 @@ export function Modal({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-background/80 hover:bg-background border border-border transition-colors"
+          className="absolute top-6 right-6 z-20 p-3 rounded-full backdrop-blur-md bg-background/60 hover:bg-background/80 hover:scale-105 border border-border/50 transition-all duration-200 text-foreground"
           aria-label="Close modal"
         >
           <svg
-            width="16"
-            height="16"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
