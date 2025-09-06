@@ -1,0 +1,131 @@
+{
+  "projects": [
+    {
+      "id": "ai-voice-assistant",
+      "name": "AI Voice Assistant",
+      "description": "Real-time voice AI with natural language processing and speech synthesis",
+      "href": "#",
+      "cta": "View Project",
+      "className": "col-span-2 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "blue-500/20",
+        "to": "purple-500/20"
+      },
+      "icon": "ChatBubbleIcon"
+    },
+   
+    {
+      "id": "mobile-fitness-app",
+      "name": "Mobile Fitness App",
+      "description": "React Native app with workout tracking and social features",
+      "href": "#",
+      "cta": "Download",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "orange-500/20",
+        "to": "red-500/20"
+      },
+      "icon": "MobileIcon"
+    },
+    {
+      "id": "devops-pipeline",
+      "name": "DevOps Pipeline",
+      "description": "Automated CI/CD with Docker, Kubernetes, and monitoring",
+      "href": "#",
+      "cta": "GitHub",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "gray-500/20",
+        "to": "slate-500/20"
+      },
+      "icon": "RocketIcon"
+    },
+    {
+      "id": "realtime-analytics",
+      "name": "Real-time Analytics",
+      "description": "Dashboard with live data visualization and machine learning insights",
+      "href": "#",
+      "cta": "Explore",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "yellow-500/20",
+        "to": "amber-500/20"
+      },
+      "icon": "LightningBoltIcon"
+    },
+    {
+      "id": "social-media-tool",
+      "name": "Social Media Tool",
+      "description": "Content scheduling and analytics platform for creators",
+      "href": "#",
+      "cta": "Try Now",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "pink-500/20",
+        "to": "rose-500/20"
+      },
+      "icon": "HeartIcon"
+    },
+    {
+      "id": "open-source-library",
+      "name": "Open Source Library",
+      "description": "Popular React component library with 10k+ GitHub stars",
+      "href": "#",
+      "cta": "Star on GitHub",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "indigo-500/20",
+        "to": "violet-500/20"
+      },
+      "icon": "StarIcon"
+    },
+    {
+      "id": "ai-image-generator",
+      "name": "AI Image Generator",
+      "description": "Text-to-image generation with custom style transfer",
+      "href": "#",
+      "cta": "Generate",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "teal-500/20",
+        "to": "cyan-500/20"
+      },
+      "icon": "CameraIcon"
+    },
+    {
+      "id": "code-automation",
+      "name": "Code Automation",
+      "description": "AI-powered code generation and refactoring tools",
+      "href": "#",
+      "cta": "Learn More",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "purple-500/20",
+        "to": "fuchsia-500/20"
+      },
+      "icon": "MagicWandIcon"
+    },
+    {
+      "id": "blockchain-dapp",
+      "name": "Blockchain DApp",
+      "description": "Decentralized application with smart contracts and Web3 integration",
+      "href": "#",
+      "cta": "Connect Wallet",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "gradient",
+        "from": "emerald-500/20",
+        "to": "green-500/20"
+      },
+      "icon": "CodeIcon"
+    }
+  ]
+}

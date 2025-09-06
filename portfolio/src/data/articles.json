@@ -1,0 +1,40 @@
+{
+  "articles": [
+    {
+      "id": "ai-voice-assistants",
+      "title": "Building Scalable AI Voice Assistants",
+      "description": "Deep dive into creating production-ready voice AI systems with real-time processing and natural conversation flows.",
+      "date": "2024-01-15",
+      "readTime": "8 min read",
+      "link": "https://medium.com/@swayam/building-scalable-ai-voice-assistants",
+      "category": "AI/ML"
+    },
+    {
+      "id": "nextjs-14-fullstack",
+      "title": "Full Stack Development with Next.js 14",
+      "description": "Complete guide to building modern web applications with the latest Next.js features and best practices.",
+      "date": "2023-12-10",
+      "readTime": "12 min read",
+      "link": "https://dev.to/swayam/fullstack-nextjs-14",
+      "category": "Web Dev"
+    },
+    {
+      "id": "microservices-patterns",
+      "title": "Microservices Architecture Patterns",
+      "description": "Exploring different patterns and strategies for building maintainable microservices at scale.",
+      "date": "2023-11-22",
+      "readTime": "15 min read",
+      "link": "https://hashnode.com/@swayam/microservices-patterns",
+      "category": "Architecture"
+    },
+    {
+      "id": "kafka-realtime-processing",
+      "title": "Real-time Data Processing with Kafka",
+      "description": "Implementation strategies for high-throughput data streaming and processing systems.",
+      "date": "2023-10-08",
+      "readTime": "10 min read",
+      "link": "https://medium.com/@swayam/realtime-kafka-processing",
+      "category": "Data"
+    }
+  ]
+}

@@ -2,8 +2,6 @@
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { NavigationDock } from "@/components/shared";
-import { HyperText } from "@/components/magicui/hyper-text";
-import { ComicText } from "@/components/magicui/comic-text";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
@@ -208,14 +206,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <ContactSection />
-      
-      {/* Rest of the content */}
-      <div className="container mx-auto px-4 py-8">
-        <p className="text-center text-muted-foreground">
-          Coming soon... This will showcase all the Magic UI components we downloaded!
-        </p>
-      </div>
-
+           
       {/* PDF Modal */}
       <PDFModal
         isOpen={isResumeModalOpen}

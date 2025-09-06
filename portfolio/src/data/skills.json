@@ -1,0 +1,42 @@
+{
+  "coreSkills": [
+    {
+      "id": "fullstack",
+      "name": "Full Stack",
+      "icon": "Code2",
+      "color": "bg-blue-500"
+    },
+    {
+      "id": "databases",
+      "name": "Databases",
+      "icon": "Database",
+      "color": "bg-green-500"
+    },
+    {
+      "id": "web-apis",
+      "name": "Web APIs",
+      "icon": "Globe",
+      "color": "bg-purple-500"
+    }
+  ],
+  "advancedSkills": [
+    {
+      "id": "ai-ml",
+      "name": "AI/ML",
+      "icon": "Brain",
+      "color": "bg-orange-500"
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile",
+      "icon": "Smartphone",
+      "color": "bg-pink-500"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "icon": "Zap",
+      "color": "bg-yellow-500"
+    }
+  ]
+}

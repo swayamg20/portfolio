@@ -1,0 +1,36 @@
+{
+  "experiences": [
+    {
+      "id": "ixigo-2024",
+      "company": "ixigo",
+      "role": "Software Engineer II - AI Products",
+      "duration": "2024 - Present",
+      "description": "Leading AI product development and implementing cutting-edge machine learning solutions for enterprise clients. Specializing in voice AI and natural language processing systems.",
+      "technologies": ["Python", "TensorFlow", "AWS", "Docker", "React"]
+    },
+    {
+      "id": "overlayy-2022",
+      "company": "overlayy AI",
+      "role": "Founding Engineer",
+      "duration": "2022 - 2023",
+      "description": "Built scalable web applications and AI-powered features from ground up. Collaborated with cross-functional teams to deliver high-impact products.",
+      "technologies": ["TypeScript", "Next.js", "Node.js", "PostgreSQL", "OpenAI API"]
+    },
+    {
+      "id": "digital-solutions-2021",
+      "company": "Digital Solutions Inc",
+      "role": "Software Engineer",
+      "duration": "2021 - 2022",
+      "description": "Developed responsive web applications and integrated AI capabilities. Focused on performance optimization and user experience enhancement.",
+      "technologies": ["JavaScript", "React", "Python", "FastAPI", "MongoDB"]
+    },
+    {
+      "id": "code-academy-2020",
+      "company": "Code Academy",
+      "role": "Junior Developer",
+      "duration": "2020 - 2021",
+      "description": "Started my journey in software development, learning modern web technologies and contributing to open-source projects.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Git", "Firebase"]
+    }
+  ]
+}
