@@ -50,12 +50,13 @@ module.exports = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-  		animation: {
-  			'fade-in': 'fadeIn 0.5s ease-in-out',
-  			'slide-up': 'slideUp 0.5s ease-out',
-  			'slide-down': 'slideDown 0.5s ease-out',
-  			'orbit': 'orbit calc(var(--duration) * 1s) linear infinite'
-  		},
+		animation: {
+			'fade-in': 'fadeIn 0.5s ease-in-out',
+			'slide-up': 'slideUp 0.5s ease-out',
+			'slide-down': 'slideDown 0.5s ease-out',
+			'orbit': 'orbit calc(var(--duration) * 1s) linear infinite',
+			'meteor': 'meteor 5s linear infinite'
+		},
   		keyframes: {
   			fadeIn: {
   				'0%': {
@@ -85,14 +86,27 @@ module.exports = {
   					opacity: '1'
   				}
   			},
-  			orbit: {
-  				'0%': {
-  					transform: 'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))'
-  				},
-  				'100%': {
-  					transform: 'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))'
-  				}
-  			}
+			orbit: {
+				'0%': {
+					transform: 'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))'
+				},
+				'100%': {
+					transform: 'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))'
+				}
+			},
+			meteor: {
+				'0%': {
+					transform: 'rotate(215deg) translateX(0)',
+					opacity: '1'
+				},
+				'70%': {
+					opacity: '1'
+				},
+				'100%': {
+					transform: 'rotate(215deg) translateX(-500px)',
+					opacity: '0'
+				}
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
