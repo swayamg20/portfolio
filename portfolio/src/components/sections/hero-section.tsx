@@ -14,7 +14,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     company: "ixigo",
-    role: "Software Engineer II",
+    role: "Software Engineer II - AI Products",
     duration: "2024 - Present",
     description: "Leading AI product development and implementing cutting-edge machine learning solutions for enterprise clients. Specializing in voice AI and natural language processing systems.",
     technologies: ["Python", "TensorFlow", "AWS", "Docker", "React"]
@@ -47,19 +47,19 @@ function TimelineItem({ experience, index, isLast }: { experience: Experience; i
     <div className="relative flex items-start group">
       {/* Timeline line */}
       {!isLast && (
-        <div className="absolute left-6 top-12 w-0.5 h-full bg-gradient-to-b from-primary/60 to-primary/20 
+        <div className="absolute left-4 top-12 w-0.5 h-full bg-gradient-to-b from-primary/60 to-primary/20 
                         group-hover:from-primary group-hover:to-primary/40 transition-all duration-500" />
       )}
       
       {/* Timeline dot */}
-      <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-background border-4 border-primary 
+      <div className="relative z-10 flex-shrink-0 w-8 h-8 bg-background border-4 border-primary 
                       rounded-full flex items-center justify-center shadow-lg
                       group-hover:scale-110 group-hover:border-primary/80 transition-all duration-300">
-        <div className="w-3 h-3 bg-primary rounded-full group-hover:bg-primary/80 transition-colors" />
+        <div className="w-2 h-2 bg-primary rounded-full group-hover:bg-primary/80 transition-colors" />
       </div>
       
       {/* Content card */}
-      <div className="flex-1 ml-6 mb-12">
+      <div className="flex-1 ml-6 mb-12 w-[60%]">
         <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 
                         shadow-xl shadow-black/5 dark:shadow-black/30
                         hover:shadow-2xl hover:shadow-black/10 dark:hover:shadow-black/40 
@@ -156,7 +156,7 @@ export function HeroSection() {
       />
       
       {/* Section Header */}
-      <div className="relative z-10 text-center mb-12 px-4">
+      <div className="relative z-10 text-center mb-12 mt-8 px-4">
         <TextAnimate
           className="text-4xl md:text-6xl font-bold text-foreground mb-4"
           animation="blurInUp"

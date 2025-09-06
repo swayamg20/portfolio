@@ -5,6 +5,7 @@ import { HyperText } from "@/components/magicui/hyper-text";
 import { ComicText } from "@/components/magicui/comic-text";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { HeroSection } from "@/components/sections/hero-section";
+import { ProjectsSection } from "@/components/sections/projects-section";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -80,6 +81,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Projects Section */}
+      <ProjectsSection />
       
       {/* Rest of the content */}
       <div className="container mx-auto px-4 py-8">
