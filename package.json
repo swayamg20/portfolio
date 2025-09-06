@@ -13,15 +13,23 @@
     "portfolio:install": "cd portfolio && npm install",
     "portfolio:dev": "cd portfolio && npm run dev",
     "portfolio:build": "cd portfolio && npm run build",
-    "portfolio:start": "cd portfolio && npm start"
+    "portfolio:start": "cd portfolio && npm start",
+    "deploy" :"gh-pages -d portfolio/out"
   },
   "dependencies": {
     "xmlbuilder2": "^3.1.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "prettier": "^3.0.0"
   },
-  "keywords": ["portfolio", "magic-ui", "components", "sitemap", "seo"],
+  "keywords": [
+    "portfolio",
+    "magic-ui",
+    "components",
+    "sitemap",
+    "seo"
+  ],
   "author": "",
   "license": "MIT",
   "workspaces": [

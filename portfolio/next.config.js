@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  output: 'export',
+  basePath: '/portolio',
+
   images: {
-    domains: ['cdn.magicui.design'],
+    unoptimized: true,
   },
   // Enable static exports if needed
   // output: 'export',
