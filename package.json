@@ -14,7 +14,7 @@
     "portfolio:dev": "cd portfolio && npm run dev",
     "portfolio:build": "cd portfolio && npm run build",
     "portfolio:start": "cd portfolio && npm start",
-    "deploy" :"gh-pages -d portfolio/out"
+    "deploy": "npm run portfolio:build && touch portfolio/out/.nojekyll && gh-pages -d portfolio/out"
   },
   "dependencies": {
     "xmlbuilder2": "^3.1.1"

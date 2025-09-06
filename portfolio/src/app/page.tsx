@@ -53,7 +53,7 @@ export default function Home() {
                   startOnView={true}
                   once={true}
                 >
-                  Swayam Gupta
+                  Swayam Gupta 
                 </TextAnimate>
                 <TextAnimate 
                   className="text-2xl md:text-3xl font-medium text-muted-foreground"
@@ -77,7 +77,7 @@ export default function Home() {
                 className="text-lg text-muted-foreground max-w-xl leading-relaxed"
                 animation="blurInUp" by="character" once duration={0.5}
               >
-                Currently hooked up with voice AI
+                Currently hooked up with conversational voice agents
               </TextAnimate>
               
               {/* Resume Button */}
