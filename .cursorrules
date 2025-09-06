@@ -1,0 +1,145 @@
+# Magic UI Portfolio Project - Cursor Rules
+
+## Project Overview
+This is a portfolio website showcasing Magic UI components. The project contains 71 component markdown files in `portfolio/content/` that document how to use each component.
+
+## Component Documentation Structure
+Each component markdown file contains:
+- **Frontmatter**: title, description, date, author, video demo URL
+- **Installation**: CLI and manual installation instructions
+- **Examples**: Visual examples and usage patterns
+- **Props**: Component properties and configuration options
+- **Code**: Implementation examples and source code
+
+## Available Components by Category
+
+### Core Components (20+)
+- marquee, terminal, hero-video-dialog, bento-grid, animated-list
+- dock, globe, tweet-card, orbiting-circles, avatar-circles
+- icon-cloud, animated-circular-progress-bar, animated-theme-toggler
+- file-tree, code-comparison, scroll-progress, lens, pointer
+- smooth-cursor, progressive-blur, arc-timeline
+
+### Special Effects (12)
+- animated-beam, border-beam, shine-border, magic-card, meteors
+- neon-gradient-card, confetti, particles, cool-mode, scratch-to-reveal
+- pixel-image, highlighter
+
+### Text Animations (18)
+- text-animate, line-shadow-text, aurora-text, video-text
+- number-ticker, animated-shiny-text, animated-gradient-text
+- text-reveal, hyper-text, word-rotate, typing-animation
+- scroll-based-velocity, flip-text, box-reveal, sparkles-text
+- morphing-text, spinning-text, comic-text
+
+### Buttons (7)
+- rainbow-button, shimmer-button, shiny-button, interactive-hover-button
+- animated-subscribe-button, pulsating-button, ripple-button
+
+### Backgrounds (9)
+- warp-background, flickering-grid, animated-grid-pattern, retro-grid
+- ripple, dot-pattern, grid-pattern, interactive-grid-pattern, grid-beams
+
+### Device Mocks (3)
+- safari, iphone-15-pro, android
+
+### Animations (1)
+- blur-fade
+
+## Development Guidelines
+
+### When Implementing Components
+1. **Check the markdown file first** - Each component has complete documentation
+2. **Use the provided code examples** - Copy from the markdown files
+3. **Follow the installation steps** - Use CLI or manual installation as documented
+4. **Implement required CSS animations** - Check the markdown for required CSS
+5. **Use the documented props** - Follow the props table for configuration
+
+### Component Implementation Pattern
+```tsx
+// 1. Import the component (check markdown for correct path)
+import { ComponentName } from "@/components/magicui/component-name";
+
+// 2. Use the component with documented props
+<ComponentName 
+  prop1="value1"
+  prop2="value2"
+>
+  {/* Content as shown in examples */}
+</ComponentName>
+```
+
+### CSS Requirements
+- Check each component's markdown for required CSS animations
+- Add animations to `portfolio/src/styles/globals.css`
+- Use the exact CSS provided in the documentation
+
+### File Organization
+- **Component files**: `portfolio/src/components/`
+- **Page files**: `portfolio/src/app/`
+- **Utility functions**: `portfolio/src/utils/`
+- **Styles**: `portfolio/src/styles/`
+- **Content**: `portfolio/content/` (markdown files)
+
+## Common Patterns
+
+### Installation Commands
+```bash
+# CLI installation (preferred)
+npx shadcn@latest add "https://magicui.design/r/component-name"
+
+# Manual installation
+# Copy code from markdown and add required CSS
+```
+
+### Component Props
+Most components support:
+- `className`: Custom CSS classes
+- `children`: Component content
+- Component-specific props (check markdown for details)
+
+### Animation Classes
+Common animation classes to add to CSS:
+```css
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--gap))); }
+}
+```
+
+## Best Practices
+
+1. **Always reference the markdown** before implementing
+2. **Copy exact code examples** from documentation
+3. **Add required CSS animations** to globals.css
+4. **Use TypeScript interfaces** for component props
+5. **Follow the documented installation method**
+6. **Test components** with the provided examples
+7. **Check for video demos** in component frontmatter
+
+## Quick Reference Commands
+
+```bash
+# View component documentation
+cat portfolio/content/component-name.md
+
+# Search for components by category
+grep -r "category:" portfolio/content/
+
+# Find components with specific features
+grep -r "video:" portfolio/content/
+
+# Check component installation requirements
+grep -A 10 "Installation" portfolio/content/component-name.md
+```
+
+## Component Showcase Strategy
+
+1. **Grid Layout**: Display components in responsive grid
+2. **Category Pages**: Separate pages for each component type
+3. **Interactive Demos**: Live component demonstrations
+4. **Code Examples**: Show implementation code
+5. **Props Documentation**: Display available configuration options
+6. **Installation Instructions**: Provide easy setup steps
+
+Remember: The markdown files are your source of truth for component implementation. Always check them first!
