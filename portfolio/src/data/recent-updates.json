@@ -1,0 +1,60 @@
+{
+  "updates": [
+    {
+      "id": "current-work-1",
+      "type": "Currently Working",
+      "category": "status",
+      "title": "Voice AI Platform",
+      "description": "Building next-gen conversational AI",
+      "color": "green",
+      "isPulsing": true,
+      "date": "2024-01-15",
+      "link": null
+    },
+    {
+      "id": "writing-1",
+      "type": "Recent Article",
+      "category": "article",
+      "title": "AI Agent Architecture",
+      "description": "Deep dive into modern AI agent design patterns",
+      "color": "blue",
+      "isPulsing": false,
+      "date": "2024-01-13",
+      "link": "https://example.com/ai-agent-architecture"
+    },
+    {
+      "id": "project-1",
+      "type": "Side Project",
+      "category": "project",
+      "title": "Portfolio Redesign",
+      "description": "Magic UI components integration",
+      "color": "orange",
+      "isPulsing": false,
+      "date": "2024-01-10",
+      "link": "https://github.com/swayamgupta/portfolio-website"
+    },
+    {
+      "id": "learning-1",
+      "type": "Currently Learning",
+      "category": "learning",
+      "title": "Advanced RAG Systems",
+      "description": "Exploring vector databases and retrieval techniques",
+      "color": "purple",
+      "isPulsing": false,
+      "date": "2024-01-08",
+      "link": null
+    },
+    {
+      "id": "writing-2",
+      "type": "Recent Article",
+      "category": "article",
+      "title": "Building Scalable Voice AI",
+      "description": "Performance optimization for real-time speech processing",
+      "color": "blue",
+      "isPulsing": false,
+      "date": "2024-01-05",
+      "link": "https://example.com/scalable-voice-ai"
+    }
+  ],
+  "lastUpdated": "2024-01-15"
+}

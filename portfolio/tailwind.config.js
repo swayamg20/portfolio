@@ -53,7 +53,8 @@ module.exports = {
   		animation: {
   			'fade-in': 'fadeIn 0.5s ease-in-out',
   			'slide-up': 'slideUp 0.5s ease-out',
-  			'slide-down': 'slideDown 0.5s ease-out'
+  			'slide-down': 'slideDown 0.5s ease-out',
+  			'orbit': 'orbit calc(var(--duration) * 1s) linear infinite'
   		},
   		keyframes: {
   			fadeIn: {
@@ -82,6 +83,14 @@ module.exports = {
   				'100%': {
   					transform: 'translateY(0)',
   					opacity: '1'
+  				}
+  			},
+  			orbit: {
+  				'0%': {
+  					transform: 'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))'
+  				},
+  				'100%': {
+  					transform: 'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))'
   				}
   			}
   		},
