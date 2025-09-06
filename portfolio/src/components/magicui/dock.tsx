@@ -29,7 +29,7 @@ const DEFAULT_DISTANCE = 140;
 const DEFAULT_DISABLEMAGNIFICATION = false;
 
 const dockVariants = cva(
-  "supports-backdrop-blur:bg-background/10 mx-auto mt-8 flex h-[58px] w-max items-center justify-center gap-2 rounded-full border p-2 backdrop-blur-md",
+  "supports-backdrop-blur:bg-background/10 mx-auto mt-8 flex w-max items-center justify-center gap-2 rounded-full border p-2 backdrop-blur-md",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -77,7 +77,10 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
           "items-start": direction === "top",
           "items-center": direction === "middle",
           "items-end": direction === "bottom",
-        })}
+        }, 
+        // Add height for horizontal docks, let vertical docks size naturally
+        className?.includes('flex-col') ? 'h-max' : 'h-[58px]'
+        )}
       >
         {renderChildren()}
       </motion.div>

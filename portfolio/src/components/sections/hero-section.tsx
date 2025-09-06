@@ -42,81 +42,98 @@ const experiences: Experience[] = [
   }
 ];
 
-function ExperienceCard({ experience, index }: { experience: Experience; index: number }) {
+function TimelineItem({ experience, index, isLast }: { experience: Experience; index: number; isLast: boolean }) {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 mb-8 bg-transparent">
-      <div className="relative group">
-        {/* Theme-aware card */}
+    <div className="relative flex items-start group">
+      {/* Timeline line */}
+      {!isLast && (
+        <div className="absolute left-6 top-12 w-0.5 h-full bg-gradient-to-b from-primary/60 to-primary/20 
+                        group-hover:from-primary group-hover:to-primary/40 transition-all duration-500" />
+      )}
+      
+      {/* Timeline dot */}
+      <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-background border-4 border-primary 
+                      rounded-full flex items-center justify-center shadow-lg
+                      group-hover:scale-110 group-hover:border-primary/80 transition-all duration-300">
+        <div className="w-3 h-3 bg-primary rounded-full group-hover:bg-primary/80 transition-colors" />
+      </div>
+      
+      {/* Content card */}
+      <div className="flex-1 ml-6 mb-12">
         <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 
-                        shadow-2xl shadow-black/10 dark:shadow-black/50
-                        hover:shadow-2xl hover:shadow-black/20 dark:hover:shadow-black/60 
-                        hover:bg-card/70 transition-all duration-300">
+                        shadow-xl shadow-black/5 dark:shadow-black/30
+                        hover:shadow-2xl hover:shadow-black/10 dark:hover:shadow-black/40 
+                        hover:bg-card/70 transition-all duration-300
+                        group-hover:translate-x-2 group-hover:-translate-y-1">
           
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <TextAnimate
-                  className="text-2xl md:text-3xl font-bold text-foreground mb-2"
-                  animation="slideLeft"
-                  by="word"
-                  delay={0.1*index}
-                //   duration={0.6}
-                  startOnView={true}
-                  once={true}
-                >
-                  {experience.role}
-                </TextAnimate>
-                <TextAnimate
-                  className="text-lg md:text-xl font-medium text-primary underline decoration-primary/30"
-                  animation="slideLeft"
-                  by="word"
-                //   duration={0.6}
-                delay={0.1*index}
-                  startOnView={true}
-                  once={true}
-                >
-                  {experience.company}
-                </TextAnimate>
-              </div>
-              <TextAnimate
-                className="text-muted-foreground font-medium mt-2 md:mt-0"
-                animation="slideLeft"
-                by="character"
-                delay={0.1*index}
-                duration={0.4}
-                startOnView={true}
-                once={true}
-              >
-                {experience.duration}
-              </TextAnimate>
-            </div>
-            
+          {/* Duration badge */}
+          <div className="inline-flex items-center px-3 py-1 bg-primary/10 border border-primary/20 
+                          rounded-full text-sm font-medium text-primary mb-4">
             <TextAnimate
-              className="text-foreground/80 leading-relaxed mb-6"
               animation="slideLeft"
-              by="text"
-              delay={0.2*index}
-              duration={0.6}
+              by="character"
+              delay={0.1 * index}
+              duration={0.4}
               startOnView={true}
               once={true}
             >
-              {experience.description}
+              {experience.duration}
             </TextAnimate>
-            
-            <div className="flex flex-wrap gap-2">
-              {experience.technologies.map((tech, techIndex) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-secondary/80 backdrop-blur-sm border border-border 
+          </div>
+          
+          {/* Role and Company */}
+          <div className="mb-4">
+            <TextAnimate
+              className="text-2xl md:text-3xl font-bold text-foreground mb-2"
+              animation="slideLeft"
+              by="word"
+              delay={0.1 * index}
+              startOnView={true}
+              once={true}
+            >
+              {experience.role}
+            </TextAnimate>
+            <TextAnimate
+              className="text-lg md:text-xl font-medium text-primary"
+              animation="slideLeft"
+              by="word"
+              delay={0.15 * index}
+              startOnView={true}
+              once={true}
+            >
+              {`@ ${experience.company}`}
+            </TextAnimate>
+          </div>
+          
+          {/* Description */}
+          <TextAnimate
+            className="text-foreground/80 leading-relaxed mb-6"
+            animation="slideLeft"
+            by="text"
+            delay={0.2 * index}
+            duration={0.6}
+            startOnView={true}
+            once={true}
+          >
+            {experience.description}
+          </TextAnimate>
+          
+          {/* Technologies */}
+          <div className="flex flex-wrap gap-2">
+            {experience.technologies.map((tech, techIndex) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-secondary/80 backdrop-blur-sm border border-border 
                            rounded-full text-sm text-secondary-foreground font-medium
-                           hover:bg-secondary transition-colors"
-                  style={{
-                    animationDelay: `${index * 200 + 400 + techIndex * 50}ms`
-                  }}
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+                           hover:bg-secondary hover:scale-105 transition-all duration-200"
+                style={{
+                  animationDelay: `${index * 200 + 400 + techIndex * 50}ms`
+                }}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -129,16 +146,17 @@ export function HeroSection() {
                        bg-background">       
       {/* Multiple background layers for depth */}
       
-      {/* <FlickeringGrid
+      <FlickeringGrid
         className="absolute inset-0 z-0"
         squareSize={4}
         gridGap={6}
+        color="hsl(var(--muted-foreground))"
         maxOpacity={0.15}
         flickerChance={0.2}
-      /> */}
+      />
       
       {/* Section Header */}
-      <div className="relative z-10 text-center mb-12 mt-12 px-4">
+      <div className="relative z-10 text-center mb-12 px-4">
         <TextAnimate
           className="text-4xl md:text-6xl font-bold text-foreground mb-4"
           animation="blurInUp"
@@ -153,7 +171,7 @@ export function HeroSection() {
           className="text-xl text-muted-foreground max-w-2xl mx-auto"
           animation="blurInUp"
           by="word"
-        //   delay={300}
+          delay={300}
           duration={0.6}
           startOnView={true}
           once={true}
@@ -162,15 +180,18 @@ export function HeroSection() {
         </TextAnimate>
       </div>
       
-      {/* Experience Cards */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 pb-16">
-        {experiences.map((experience, index) => (
-          <ExperienceCard 
-            key={`${experience.company}-${experience.role}`}
-            experience={experience} 
-            index={index} 
-          />
-        ))}
+      {/* Timeline */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 pb-16">
+        <div className="relative">
+          {experiences.map((experience, index) => (
+            <TimelineItem 
+              key={`${experience.company}-${experience.role}`}
+              experience={experience} 
+              index={index}
+              isLast={index === experiences.length - 1}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

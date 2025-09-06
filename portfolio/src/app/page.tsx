@@ -12,20 +12,22 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <NavigationDock />
 
-      {/* Introduction Section with Animated Grid Pattern */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Grid Pattern Background */}
-        <AnimatedGridPattern 
-          width={60}
-          height={60}
-          numSquares={100}
-          maxOpacity={1}
-          duration={3}
-          className={cn(
-            "[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 opacity-40",
-          )}
-        />
+      {/* Fixed Full-Screen Animated Grid Pattern Background */}
+      <AnimatedGridPattern 
+        width={60}
+        height={60}
+        numSquares={100}
+        maxOpacity={1}
+        duration={3}
+        className={cn(
+          "inset-0 w-full h-full z-0",
+          "[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]",
+          "skew-y-12 opacity-40",
+        )}
+      />
+
+      {/* Introduction Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden z-10">{/* Content moved below */}
         
         {/* Content Container */}
         <div className="relative z-10 container mx-auto px-4 py-0 text-left">                    

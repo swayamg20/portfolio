@@ -117,9 +117,9 @@ export function MainNavigationDock() {
 // Social & Theme Navigation Dock (Right)
 export function SocialNavigationDock() {
   return (
-    <div className="fixed top-0 right-4 z-50">
+    <div className="fixed top-1/2 right-4 -translate-y-1/2 z-50">
       <TooltipProvider>
-        <Dock direction="middle" className="px-4 py-3 gap-0">
+        <Dock direction="middle" className="flex-col py-4 px-3 gap-0">
           {/* Social Links */}
           {NAVIGATION_DATA.social.map((social) => (
             <DockIcon key={social.name}>
@@ -138,14 +138,14 @@ export function SocialNavigationDock() {
                     <social.icon className="size-4" />
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="left">
                   <p>{social.name}</p>
                 </TooltipContent>
               </Tooltip>
             </DockIcon>
           ))}
 
-          <Separator orientation="vertical" className="h-full mx-2" />
+          <Separator orientation="horizontal" className="w-full my-2" />
 
           {/* Theme Toggler */}
           <DockIcon>
@@ -158,7 +158,7 @@ export function SocialNavigationDock() {
                   )}
                 />
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipContent side="left">
                 <p>Toggle Theme</p>
               </TooltipContent>
             </Tooltip>
