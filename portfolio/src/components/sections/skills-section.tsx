@@ -14,15 +14,6 @@ export function SkillsSection() {
 
   return (
     <section className="relative py-20 overflow-hidden">
-      {/* Dot Pattern Background */}
-      <DotPattern 
-        className="opacity-30 text-muted-foreground/20"
-        width={20}
-        height={20}
-        cx={1}
-        cy={1}
-        cr={1}
-      />
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           

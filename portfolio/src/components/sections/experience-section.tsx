@@ -11,17 +11,7 @@ export function ExperienceSection() {
   const { experiences } = experiencesData as ExperiencesData;
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden 
-                       bg-background">       
-      {/* Multiple background layers for depth */}
-      
-      <FlickeringGrid
-        className="absolute inset-0 z-0"
-        squareSize={4}
-        gridGap={6}
-        maxOpacity={0.15}
-        flickerChance={0.2}
-      />
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       
       {/* Section Header */}
       <div className="relative z-10 text-center mb-12 mt-8 px-4">

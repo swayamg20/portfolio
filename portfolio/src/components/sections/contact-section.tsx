@@ -6,6 +6,7 @@ import { ShineBorder } from "@/components/magicui/shine-border";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { Meteors } from "@/components/magicui/meteors";
 import { cn } from "@/lib/utils";
+import { DotPattern } from '../magicui/dot-pattern';
 
 interface FormData {
   name: string;
@@ -72,14 +73,15 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden min-h-screen bg-background/95">
-      {/* Meteors Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <Meteors 
-          number={30}
-        //   className="bg-blue-400/80 shadow-[0_0_0_1px_#3b82f6]"
-        />
-      </div>
+    <section className="relative py-20 px-4 overflow-hidden min-h-screen">
+      <DotPattern
+        className="absolute inset-0 opacity-20 fill-orange-500/20 dark:fill-orange-400/20"
+        width={20}
+        height={20}
+        cx={1}
+        cy={1}
+        cr={1}
+      />
       
       <div className="container mx-auto max-w-4xl relative z-10">
         {/* Section Header */}
