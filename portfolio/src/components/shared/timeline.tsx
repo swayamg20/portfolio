@@ -2,6 +2,7 @@
 
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { Experience } from "@/types/experiences";
+import { ExternalLink } from "lucide-react";
 
 interface TimelineItemProps {
   experience: Experience;
@@ -61,31 +62,108 @@ function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
             >
               {experience.role}
             </TextAnimate>
+            <div className="flex items-center gap-2">
+              <TextAnimate
+                className="text-lg md:text-xl font-medium text-primary"
+                animation="fadeIn" 
+                by="line"
+                delay={0.15 * index}
+                startOnView={true}
+                once={true}
+              >
+                {`@ ${experience.company}`}
+              </TextAnimate>
+              {experience.companyUrl && (
+                <a
+                  href={experience.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-200"
+                  aria-label={`Visit ${experience.company} website`}
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
+            </div>
+          </div>
+          
+          {/* Description/Project Name */}
+          {experience.description && (
             <TextAnimate
-              className="text-lg md:text-xl font-medium text-primary"
+              className="text-lg font-semibold text-primary/90 mb-4"
               animation="fadeIn" 
-            by="line"
-              delay={0.15 * index}
+              by="line"
+              delay={0.2 * index}
+              duration={0.6}
               startOnView={true}
               once={true}
             >
-              {`@ ${experience.company}`}
+              {experience.description}
             </TextAnimate>
-          </div>
-          
-          {/* Description */}
-          <TextAnimate
-            className="text-foreground/80 leading-relaxed mb-6"
-            animation="fadeIn" 
-            by="line"
-            // by="text"
-            delay={0.2 * index}
-            duration={0.6}
-            startOnView={true}
-            once={true}
-          >
-            {experience.description}
-          </TextAnimate>
+          )}
+
+          {/* Achievements */}
+          {experience.achievements && experience.achievements.length > 0 && (
+            <div className="mb-6">
+              <ul className="space-y-3">
+                {experience.achievements.map((achievement, achIndex) => (
+                  <li key={achIndex} className="flex items-start">
+                    <span className="text-primary mr-3 mt-1 flex-shrink-0">•</span>
+                    <TextAnimate
+                      className="text-foreground/80 leading-relaxed text-sm"
+                      animation="fadeIn"
+                      by="line"
+                      delay={0.2 * index + achIndex * 0.1}
+                      duration={0.6}
+                      startOnView={true}
+                      once={true}
+                    >
+                      {achievement}
+                    </TextAnimate>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Projects */}
+          {experience.projects && experience.projects.length > 0 && (
+            <div className="mb-6">
+              {experience.projects.map((project, projIndex) => (
+                <div key={projIndex} className="mb-4 last:mb-0">
+                  <TextAnimate
+                    className="text-base font-semibold text-foreground mb-2"
+                    animation="fadeIn"
+                    by="line"
+                    delay={0.3 * index + projIndex * 0.1}
+                    duration={0.6}
+                    startOnView={true}
+                    once={true}
+                  >
+                    {project.title}
+                  </TextAnimate>
+                  <ul className="space-y-2 ml-4">
+                    {project.details.map((detail, detailIndex) => (
+                      <li key={detailIndex} className="flex items-start">
+                        <span className="text-primary/70 mr-3 mt-1 flex-shrink-0">◦</span>
+                        <TextAnimate
+                          className="text-foreground/70 leading-relaxed text-sm"
+                          animation="fadeIn"
+                          by="line"
+                          delay={0.3 * index + projIndex * 0.1 + detailIndex * 0.05}
+                          duration={0.6}
+                          startOnView={true}
+                          once={true}
+                        >
+                          {detail}
+                        </TextAnimate>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
           
           {/* Technologies */}
           <div className="flex flex-wrap gap-2">

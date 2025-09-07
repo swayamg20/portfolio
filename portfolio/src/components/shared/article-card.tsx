@@ -63,18 +63,14 @@ export function ArticleCard({ article, index = 0, className = "" }: ArticleCardP
 interface ArticleListProps {
   articles: Article[];
   className?: string;
-  showViewAll?: boolean;
-  viewAllHref?: string;
 }
 
 export function ArticleList({ 
   articles, 
-  className = "", 
-  showViewAll = false, 
-  viewAllHref = "/articles" 
+  className = ""
 }: ArticleListProps) {
   return (
-    <div className={className}>
+    <div className={`${className} max-h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent hover:scrollbar-thumb-border/80 pr-2`}>
       <div className="space-y-6">
         {articles.map((article, index) => (
           <ArticleCard
@@ -84,20 +80,6 @@ export function ArticleList({
           />
         ))}
       </div>
-
-      {showViewAll && (
-        <div className="mt-8 text-center">
-          <div className="animate-in slide-in-from-bottom-4 fade-in duration-500 delay-500">
-            <a
-              href={viewAllHref}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:bg-muted/50 transition-all duration-200 text-foreground hover:text-primary font-medium"
-            >
-              View All Articles
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

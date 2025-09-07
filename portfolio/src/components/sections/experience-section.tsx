@@ -1,6 +1,5 @@
 "use client";
 
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { Timeline } from "@/components/shared";
 import { ExperiencesData } from "@/types/experiences";

@@ -9,7 +9,11 @@ import {
   Smartphone, 
   Brain, 
   Zap,
-  User
+  User,
+  MessageSquare,
+  Mic,
+  Users,
+  Activity
 } from "lucide-react";
 
 // Icon mapping for string-based icon references
@@ -21,6 +25,10 @@ const iconMap = {
   Brain,
   Zap,
   User,
+  MessageSquare,
+  Mic,
+  Users,
+  Activity,
 };
 
 interface SkillsOrbitProps {

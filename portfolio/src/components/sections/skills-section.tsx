@@ -77,15 +77,13 @@ export function SkillsSection() {
                 startOnView={true}
                 once={true}
               >
-                Sharing knowledge and insights
+                I have recently started writing on Medium, here are some of my latest articles:
               </TextAnimate>
             </div>
 
             {/* Articles List */}
             <ArticleList 
               articles={articles}
-              showViewAll={true}
-              viewAllHref="/articles"
             />
           </div>
 

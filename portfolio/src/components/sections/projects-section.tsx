@@ -12,8 +12,7 @@ export function ProjectsSection() {
         className="absolute inset-0 opacity-30"
         squareSize={4}
         gridGap={6}
-        color="rgb(147, 51, 234)"
-        maxOpacity={0.3}
+        maxOpacity={0.5}
       />
       <div className="container mx-auto px-4">
         {/* Section Header */}

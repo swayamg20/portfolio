@@ -1,40 +1,23 @@
 {
   "articles": [
     {
-      "id": "ai-voice-assistants",
-      "title": "Building Scalable AI Voice Assistants",
-      "description": "Deep dive into creating production-ready voice AI systems with real-time processing and natural conversation flows.",
-      "date": "2024-01-15",
+      "id": "multi-target-js-sdk",
+      "title": "Building a Multi Target JavaScript SDK: Build Tooling",
+      "description": "An in-depth look at architecting a build system that compiles a single codebase into three distinct deployment targets, complete with automated CI/CD pipelines.",
+      "date": "2025-08-17",
       "readTime": "8 min read",
-      "link": "https://medium.com/@swayam/building-scalable-ai-voice-assistants",
-      "category": "AI/ML"
+      "link": "https://swayamgupta20.medium.com/building-a-multi-target-javascript-sdk-build-tooling-839ace1f491d",
+      "category": "Development"
     },
     {
-      "id": "nextjs-14-fullstack",
-      "title": "Full Stack Development with Next.js 14",
-      "description": "Complete guide to building modern web applications with the latest Next.js features and best practices.",
-      "date": "2023-12-10",
-      "readTime": "12 min read",
-      "link": "https://dev.to/swayam/fullstack-nextjs-14",
-      "category": "Web Dev"
-    },
-    {
-      "id": "microservices-patterns",
-      "title": "Microservices Architecture Patterns",
-      "description": "Exploring different patterns and strategies for building maintainable microservices at scale.",
-      "date": "2023-11-22",
-      "readTime": "15 min read",
-      "link": "https://hashnode.com/@swayam/microservices-patterns",
-      "category": "Architecture"
-    },
-    {
-      "id": "kafka-realtime-processing",
-      "title": "Real-time Data Processing with Kafka",
-      "description": "Implementation strategies for high-throughput data streaming and processing systems.",
-      "date": "2023-10-08",
-      "readTime": "10 min read",
-      "link": "https://medium.com/@swayam/realtime-kafka-processing",
-      "category": "Data"
+      "id": "lottie-indexeddb-persistence",
+      "title": "Unlock Lightning-Fast Lottie Loads with IndexedDB Persistence",
+      "description": "How we tackled large Lottie animation loading challenges by moving from naive fetching to a robust, persistent caching solution using IndexedDB for 6.7MB animations.",
+      "date": "2025-04-07",
+      "readTime": "6 min read",
+      "link": "https://swayamgupta20.medium.com/unlock-lightning-fast-lottie-loads-with-indexeddb-persistence-a124562e324b",
+      "category": "Performance"
     }
+
   ]
 }

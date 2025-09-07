@@ -17,6 +17,12 @@
       "name": "Web APIs",
       "icon": "Globe",
       "color": "bg-purple-500"
+    },
+    {
+      "id": "llm-integration",
+      "name": "LLM Integration",
+      "icon": "MessageSquare",
+      "color": "bg-indigo-500"
     }
   ],
   "advancedSkills": [
@@ -25,6 +31,18 @@
       "name": "AI/ML",
       "icon": "Brain",
       "color": "bg-orange-500"
+    },
+    {
+      "id": "voice-ai",
+      "name": "Voice AI",
+      "icon": "Mic",
+      "color": "bg-red-500"
+    },
+    {
+      "id": "multi-agent",
+      "name": "Multi-Agent",
+      "icon": "Users",
+      "color": "bg-cyan-500"
     },
     {
       "id": "mobile",
@@ -37,6 +55,12 @@
       "name": "DevOps",
       "icon": "Zap",
       "color": "bg-yellow-500"
+    },
+    {
+      "id": "real-time",
+      "name": "Real-time Systems",
+      "icon": "Activity",
+      "color": "bg-emerald-500"
     }
   ]
 }
