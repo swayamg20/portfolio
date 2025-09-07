@@ -8,6 +8,7 @@ import { TooltipContent, Tooltip, TooltipProvider, TooltipTrigger } from "@/comp
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -80,20 +81,19 @@ const Icons = {
     </svg>
   ),
   medium: (props: IconProps) => (
-    <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-<path d="M15 12A13 13 0 1015 38 13 13 0 1015 12zM35.5 13c-3.59 0-6.5 5.373-6.5 12 0 1.243.102 2.441.292 3.568.253 1.503.662 2.879 1.192 4.065.265.593.56 1.138.881 1.627.642.978 1.388 1.733 2.202 2.201C34.178 36.811 34.827 37 35.5 37s1.322-.189 1.933-.539c.814-.468 1.56-1.223 2.202-2.201.321-.489.616-1.034.881-1.627.53-1.185.939-2.562 1.192-4.065C41.898 27.441 42 26.243 42 25 42 18.373 39.09 13 35.5 13zM45.5 14c-.259 0-.509.173-.743.495-.157.214-.307.494-.448.833-.071.169-.14.353-.206.551-.133.395-.257.846-.37 1.343-.226.995-.409 2.181-.536 3.497-.063.658-.112 1.349-.146 2.065C43.017 23.499 43 24.241 43 25s.017 1.501.051 2.217c.033.716.082 1.407.146 2.065.127 1.316.31 2.501.536 3.497.113.498.237.948.37 1.343.066.198.135.382.206.551.142.339.292.619.448.833C44.991 35.827 45.241 36 45.5 36c1.381 0 2.5-4.925 2.5-11S46.881 14 45.5 14z"></path>
-</svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+    </svg>
   ),
 };
 
 const NAVIGATION_DATA = {
   pages: [
-    { href: "/", label: "Home", icon: Icons.home },
-    { href: "/experience", label: "Experience", icon: Icons.experience },
-    { href: "/projects", label: "Projects", icon: Icons.projects },
-    { href: "/skills", label: "Skills", icon: Icons.skills },
-    { href: "/blog", label: "Blogs", icon: Icons.blogs },
-    { href: "/contact", label: "Contact", icon: Icons.contact },
+    { href: "#home", label: "Home", icon: Icons.home },
+    { href: "#experience", label: "Experience", icon: Icons.experience },
+    { href: "#projects", label: "Projects", icon: Icons.projects },
+    { href: "#skills", label: "Skills", icon: Icons.skills },
+    { href: "#contact", label: "Contact", icon: Icons.contact },
   ],
   social: [
     {
@@ -113,7 +113,7 @@ const NAVIGATION_DATA = {
     },
     {
       name: "Medium",
-      url: "https://medium.com/@swayamg20",
+      url: "https://swayamgupta20.medium.com/",
       icon: Icons.medium,
     },
     {
@@ -124,22 +124,65 @@ const NAVIGATION_DATA = {
   ],
 };
 
+// Smooth scroll function
+const smoothScrollTo = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+};
+
+// Hook to detect active section
+const useActiveSection = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'experience', 'projects', 'skills', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Offset for better detection
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return activeSection;
+};
+
 // Main Pages Navigation Dock (Center)
 export function MainNavigationDock() {
   const pathname = usePathname();
+  const activeSection = useActiveSection();
 
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 z-50">
       <TooltipProvider>
         <Dock direction="middle" className="px-4 py-3 gap-6">
           {NAVIGATION_DATA.pages.map((page) => {
-            const isActive = pathname === page.href;
+            const sectionId = page.href.replace('#', '');
+            const isActive = activeSection === sectionId;
             return (
               <DockIcon key={page.label}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link
-                      href={page.href}
+                    <button
+                      onClick={() => smoothScrollTo(sectionId)}
                       aria-label={page.label}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
@@ -150,7 +193,7 @@ export function MainNavigationDock() {
                       )}
                     >
                       <page.icon className="size-5" />
-                    </Link>
+                    </button>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>{page.label}</p>
@@ -170,24 +213,45 @@ export function SocialNavigationDock() {
   return (
     <div className="fixed top-1/2 right-4 -translate-y-1/2 z-50">
       <TooltipProvider>
-        <Dock direction="middle" className="flex-col py-4 px-3 gap-0">
+        <Dock direction="middle" className="flex-col py-4 px-3 gap-0" iconSize={36} iconMagnification={48}>
           {/* Social Links */}
           {NAVIGATION_DATA.social.map((social) => (
-            <DockIcon key={social.name}>
+            <DockIcon 
+              key={social.name} 
+              className="cursor-pointer"
+              onClick={() => {
+                if (social.url.startsWith('http')) {
+                  window.open(social.url, '_blank', 'noopener,noreferrer');
+                } else {
+                  window.location.href = social.url;
+                }
+              }}
+            >
+              
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
+                  <div
                     aria-label={social.name}
-                    target={social.url.startsWith('http') ? '_blank' : undefined}
-                    rel={social.url.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-9 rounded-full hover:bg-secondary/80 transition-all duration-200",
+                      "size-9 rounded-full hover:bg-secondary/80 transition-all duration-200 cursor-pointer",
                     )}
                   >
+                    <Link
+                      href={social.url}
+                      aria-label={social.name}
+                      target={social.url.startsWith('http') ? '_blank' : undefined}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-10 rounded-full transition-all duration-200",
+                        // isActive 
+                        //   ? "bg-primary text-primary-foreground shadow-md scale-105" 
+                        //   : "hover:bg-secondary/80"
+                      )}
+                    >
                     <social.icon className="size-4" />
-                  </Link>
+                    </Link>
+                  </div>
                 </TooltipTrigger>
                 <TooltipContent side="left">
                   <p>{social.name}</p>
@@ -199,13 +263,13 @@ export function SocialNavigationDock() {
           <Separator orientation="horizontal" className="w-full my-2" />
 
           {/* Theme Toggler */}
-          <DockIcon>
+          <DockIcon className="cursor-auto">
             <Tooltip>
               <TooltipTrigger asChild>
                 <AnimatedThemeToggler 
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-9 rounded-full hover:bg-secondary/80 transition-all duration-200",
+                    "size-9 rounded-full hover:bg-secondary/80 transition-all duration-200 cursor-pointer",
                   )}
                 />
               </TooltipTrigger>

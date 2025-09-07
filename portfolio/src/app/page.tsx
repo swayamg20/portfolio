@@ -3,7 +3,7 @@ import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern"
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { NavigationDock } from "@/components/shared";
 import { TextAnimate } from "@/components/magicui/text-animate";
-import { HeroSection } from "@/components/sections/hero-section";
+import { ExperienceSection } from "@/components/sections/experience-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 import { ContactSection } from "@/components/sections/contact-section";
@@ -36,7 +36,7 @@ export default function Home() {
       />
 
       {/* Introduction Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden z-10">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden z-10">
         <div className="relative z-10 container mx-auto px-4 py-0">
           <div className="flex items-center justify-between gap-8">
             
@@ -196,16 +196,24 @@ export default function Home() {
       </section>
 
       {/* Hero Section */}
-      <HeroSection />
+      <div id="experience">
+        <ExperienceSection />
+      </div>
 
       {/* Projects Section */}
-      <ProjectsSection />
+      <div id="projects">
+        <ProjectsSection />
+      </div>
 
       {/* Skills Section */}
-      <SkillsSection />
+      <div id="skills">
+        <SkillsSection />
+      </div>
 
       {/* Contact Section */}
-      <ContactSection />
+      <div id="contact">
+        <ContactSection />
+      </div>
            
       {/* PDF Modal */}
       <PDFModal

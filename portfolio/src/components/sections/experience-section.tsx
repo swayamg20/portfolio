@@ -7,7 +7,7 @@ import { ExperiencesData } from "@/types/experiences";
 import experiencesData from "@/data/experiences.json";
 
 
-export function HeroSection() {
+export function ExperienceSection() {
   const { experiences } = experiencesData as ExperiencesData;
 
   return (
@@ -19,7 +19,6 @@ export function HeroSection() {
         className="absolute inset-0 z-0"
         squareSize={4}
         gridGap={6}
-        color="hsl(var(--muted-foreground))"
         maxOpacity={0.15}
         flickerChance={0.2}
       />
