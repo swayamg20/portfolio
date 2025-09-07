@@ -52,7 +52,7 @@ function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
           {/* Role and Company */}
           <div className="mb-4">
             <TextAnimate
-              className="text-2xl md:text-3xl font-bold text-foreground mb-2"
+              className="text-xl md:text-2xl font-bold text-foreground mb-2"
               animation="fadeIn" 
             by="line"
               // by="word"
@@ -64,7 +64,7 @@ function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
             </TextAnimate>
             <div className="flex items-center gap-2">
               <TextAnimate
-                className="text-lg md:text-xl font-medium text-primary"
+                className="text-base md:text-lg font-medium text-primary"
                 animation="fadeIn" 
                 by="line"
                 delay={0.15 * index}
@@ -90,7 +90,7 @@ function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
           {/* Description/Project Name */}
           {experience.description && (
             <TextAnimate
-              className="text-lg font-semibold text-primary/90 mb-4"
+              className="text-base font-semibold text-primary/90 mb-4"
               animation="fadeIn" 
               by="line"
               delay={0.2 * index}
@@ -132,7 +132,7 @@ function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
               {experience.projects.map((project, projIndex) => (
                 <div key={projIndex} className="mb-4 last:mb-0">
                   <TextAnimate
-                    className="text-base font-semibold text-foreground mb-2"
+                    className="text-sm font-semibold text-foreground mb-2"
                     animation="fadeIn"
                     by="line"
                     delay={0.3 * index + projIndex * 0.1}
@@ -171,7 +171,7 @@ function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
               <span
                 key={tech}
                 className="px-3 py-1 bg-secondary/80 backdrop-blur-sm border border-border 
-                           rounded-full text-sm text-secondary-foreground font-medium
+                           rounded-full text-xs text-secondary-foreground font-medium
                            hover:bg-secondary hover:scale-105 transition-all duration-200"
                 style={{
                   animationDelay: `${index * 200 + 400 + techIndex * 50}ms`

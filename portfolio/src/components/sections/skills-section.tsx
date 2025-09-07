@@ -2,7 +2,7 @@
 
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { DotPattern } from "@/components/magicui/dot-pattern";
-import { SkillsOrbit, SkillsLegend, ArticleList } from "@/components/shared";
+import { SkillsGrid, ArticleList } from "@/components/shared";
 import { SkillsData } from "@/types/skills";
 import { ArticlesData } from "@/types/articles";
 import skillsData from "@/data/skills.json";
@@ -17,7 +17,7 @@ export function SkillsSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Side - Orbiting Circles */}
+          {/* Left Side - Skills Grid */}
           <div className="relative">
             <div className="text-center mb-8">
               <TextAnimate
@@ -42,17 +42,10 @@ export function SkillsSection() {
               </TextAnimate>
             </div>
 
-            {/* Orbiting Circles Container */}
-            <SkillsOrbit 
+            {/* Skills Grid */}
+            <SkillsGrid 
               coreSkills={coreSkills}
               advancedSkills={advancedSkills}
-            />
-
-            {/* Skills Legend */}
-            <SkillsLegend 
-              coreSkills={coreSkills}
-              advancedSkills={advancedSkills}
-              className="mt-8"
             />
           </div>
 

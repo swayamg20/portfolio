@@ -1,0 +1,51 @@
+{
+  "internships": [
+    {
+      "id": "intern-1",
+      "company": "Tech Startup Inc",
+      "companyUrl": "https://techstartup.com",
+      "role": "Frontend Developer Intern",
+      "duration": "Jun 2023 - Aug 2023",
+      "location": "San Francisco, CA",
+      "description": "Worked on React-based user interfaces for customer dashboard",
+      "achievements": [
+        "Implemented responsive design for mobile users, increasing mobile engagement by 30%",
+        "Collaborated with design team to create reusable component library",
+        "Optimized app performance reducing load time by 25%"
+      ],
+      "technologies": ["React", "TypeScript", "Tailwind CSS", "Redux", "Figma"],
+      "type": "remote"
+    },
+    {
+      "id": "intern-2", 
+      "company": "Digital Agency Co",
+      "role": "Full Stack Intern",
+      "duration": "Jan 2023 - May 2023",
+      "location": "New York, NY",
+      "description": "Built end-to-end web applications for client projects",
+      "achievements": [
+        "Developed 3 client websites from scratch using modern tech stack",
+        "Integrated payment systems and user authentication",
+        "Mentored 2 junior interns on best practices"
+      ],
+      "technologies": ["Next.js", "Node.js", "PostgreSQL", "Stripe API", "Docker"],
+      "type": "hybrid"
+    },
+    {
+      "id": "intern-3",
+      "company": "Innovation Labs",
+      "companyUrl": "https://innovationlabs.io",
+      "role": "Software Engineering Intern",
+      "duration": "Jun 2022 - Aug 2022",
+      "location": "Boston, MA", 
+      "description": "Contributed to machine learning pipeline and data visualization tools",
+      "achievements": [
+        "Built data visualization dashboard processing 1M+ records",
+        "Implemented automated testing suite improving code coverage to 90%",
+        "Presented findings to senior leadership team"
+      ],
+      "technologies": ["Python", "Django", "Chart.js", "AWS", "Docker", "PostgreSQL"],
+      "type": "onsite"
+    }
+  ]
+}

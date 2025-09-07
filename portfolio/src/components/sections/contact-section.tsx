@@ -228,7 +228,7 @@ export function ContactSection() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-6 text-sm">
                   <a 
-                    href="mailto:your.email@example.com" 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=gupta.swayam123@gmail.com&su=Hi%20Swayam&body=" 
                     className="text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

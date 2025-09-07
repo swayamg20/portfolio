@@ -118,7 +118,7 @@ const NAVIGATION_DATA = {
     },
     {
       name: "Email",
-      url: "mailto:gupta.swayam123@gmail.com",
+      url: "https://mail.google.com/mail/?view=cm&fs=1&to=gupta.swayam123@gmail.com&su=Hi%20Swayam&body=",
       icon: Icons.email,
     },
   ],
