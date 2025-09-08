@@ -1,66 +1,102 @@
 {
-  "coreSkills": [
+  "skills": [
     {
-      "id": "fullstack",
-      "name": "Full Stack",
+      "id": "javascript-ts",
+      "name": "Js/Ts",
       "icon": "Code2",
       "color": "bg-blue-500"
     },
     {
-      "id": "databases",
-      "name": "Databases",
-      "icon": "Database",
+      "id": "python",
+      "name": "Python",
+      "icon": "Code2",
       "color": "bg-green-500"
     },
     {
-      "id": "web-apis",
-      "name": "Web APIs",
-      "icon": "Globe",
+      "id": "elixir",
+      "name": "Elixir",
+      "icon": "Code2",
       "color": "bg-purple-500"
     },
     {
-      "id": "llm-integration",
-      "name": "LLM Integration",
-      "icon": "MessageSquare",
-      "color": "bg-indigo-500"
-    }
-  ],
-  "advancedSkills": [
-    {
-      "id": "ai-ml",
-      "name": "AI/ML",
-      "icon": "Brain",
-      "color": "bg-orange-500"
+      "id": "cpp",
+      "name": "C++",
+      "icon": "Code2",
+      "color": "bg-gray-600"
     },
     {
-      "id": "voice-ai",
-      "name": "Voice AI",
-      "icon": "Mic",
+      "id": "nodejs",
+      "name": "Node.js",
+      "icon": "Zap",
+      "color": "bg-green-400"
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "icon": "Zap",
+      "color": "bg-emerald-500"
+    },
+    {
+      "id": "phoenix",
+      "name": "Elixir/Phoenix",
+      "icon": "Zap",
+      "color": "bg-purple-400"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "icon": "Database",
+      "color": "bg-blue-600"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "icon": "Database",
+      "color": "bg-green-600"
+    },
+    {
+      "id": "neo4j",
+      "name": "Neo4j",
+      "icon": "Database",
+      "color": "bg-orange-600"
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "icon": "Database",
+      "color": "bg-red-600"
+    },
+
+    {
+      "id": "webrtc",
+      "name": "WebRTC",
+      "icon": "Activity",
       "color": "bg-red-500"
     },
     {
-      "id": "multi-agent",
-      "name": "Multi-Agent",
-      "icon": "Users",
-      "color": "bg-cyan-500"
-    },
-    {
-      "id": "mobile",
-      "name": "Mobile",
-      "icon": "Smartphone",
+      "id": "voice-ai",
+      "name": "Voice AI Pipeline",
+      "icon": "Mic",
       "color": "bg-pink-500"
     },
     {
-      "id": "devops",
-      "name": "DevOps",
+      "id": "aws",
+      "name": "AWS",
       "icon": "Zap",
-      "color": "bg-yellow-500"
+      "color": "bg-orange-400"
     },
     {
-      "id": "real-time",
-      "name": "Real-time Systems",
+      "id": "docker",
+      "name": "Docker",
+      "icon": "Zap",
+      "color": "bg-blue-400"
+    },
+    {
+      "id": "websockets",
+      "name": "WebSockets/SSE",
       "icon": "Activity",
-      "color": "bg-emerald-500"
+      "color": "bg-cyan-400"
     }
   ]
 }
+

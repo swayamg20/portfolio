@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed navigation */
   }
   
   :root {
@@ -256,5 +257,44 @@
   
   .scrollbar-thin:hover::-webkit-scrollbar-thumb {
     background-color: hsl(var(--border) / 0.8);
+  }
+
+  /* Smooth scroll utilities */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  .scroll-offset {
+    scroll-margin-top: 80px;
+  }
+
+  /* Enhanced smooth scrolling with custom timing */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .smooth-scroll-enhanced {
+      scroll-behavior: smooth;
+      scroll-snap-type: y proximity;
+    }
+    
+    .scroll-snap-section {
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+    }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

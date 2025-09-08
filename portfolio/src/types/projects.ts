@@ -1,8 +1,13 @@
-export interface ProjectBackground {
-  type: 'gradient';
-  from: string;
-  to: string;
-}
+export type ProjectBackground =
+  | {
+      type: 'gradient';
+      from: string;
+      to: string;
+    }
+  | {
+      type: 'image';
+      url: string;
+    };
 
 export interface Project {
   id: string;
@@ -13,6 +18,7 @@ export interface Project {
   className: string;
   background: ProjectBackground;
   icon: string;
+  status?: string;
 }
 
 export interface ProjectsData {

@@ -31,16 +31,14 @@ const iconMap = {
 };
 
 interface SkillsGridProps {
-  coreSkills: Skill[];
-  advancedSkills: Skill[];
+  skills: Skill[];
   className?: string;
 }
 
-export function SkillsGrid({ coreSkills, advancedSkills, className = "" }: SkillsGridProps) {
+export function SkillsGrid({ skills, className = "" }: SkillsGridProps) {
   return (
     <div className={`space-y-6 ${className}`}>
-      <SkillGroupCard title="Core Skills" skills={coreSkills} shineColors={["#60a5fa22", "#a78bfa22", "#34d39922"]} />
-      <SkillGroupCard title="Advanced" skills={advancedSkills} shineColors={["#f59e0b22", "#22d3ee22", "#ef444422"]} />
+      <SkillGroupCard title="Technologies & Expertise" skills={skills} shineColors={["#60a5fa22", "#a78bfa22", "#34d39922", "#f59e0b22", "#22d3ee22", "#ef444422"]} />
     </div>
   );
 }

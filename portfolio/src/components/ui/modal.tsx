@@ -45,7 +45,7 @@ export function Modal({
       {/* Overlay */}
       <div 
         className={cn(
-          "absolute inset-0 bg-black/80 backdrop-blur-sm",
+          "absolute inset-0 bg-black/80 backdrop-blur-sm animate-fade-in duration-200",
           overlayClassName
         )}
         onClick={onClose}
@@ -54,7 +54,7 @@ export function Modal({
       {/* Modal Content */}
       <div 
         className={cn(
-          "relative z-10 w-[90%] h-[90%] bg-background rounded-lg shadow-2xl border border-border",
+          "relative z-10 w-[90%] h-[90%] bg-background rounded-lg shadow-2xl border border-border will-change-transform animate-slide-up duration-300",
           className
         )}
         onClick={(e) => e.stopPropagation()}

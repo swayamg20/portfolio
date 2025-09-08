@@ -10,18 +10,7 @@ interface InternshipCardProps {
 }
 
 export function InternshipCard({ internship, index }: InternshipCardProps) {
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'remote':
-        return '🏠';
-      case 'onsite':
-        return '🏢';
-      case 'hybrid':
-        return '🔄';
-      default:
-        return '💼';
-    }
-  };
+
 
   const getTypeBadgeColor = (type: string) => {
     switch (type) {
@@ -47,7 +36,7 @@ export function InternshipCard({ internship, index }: InternshipCardProps) {
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-lg">{getTypeIcon(internship.type)}</span>
+            {/* <span className="text-lg">{getTypeIcon(internship.type)}</span> */}
             <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getTypeBadgeColor(internship.type)}`}>
               {internship.type.charAt(0).toUpperCase() + internship.type.slice(1)}
             </span>

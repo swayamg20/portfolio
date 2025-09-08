@@ -1,131 +1,105 @@
 {
   "projects": [
+    
     {
-      "id": "ai-voice-assistant",
-      "name": "AI Voice Assistant",
-      "description": "Real-time voice AI with natural language processing and speech synthesis",
+      "id": "reel2trip-ixigo-hackweek-25",
+      "name": "Reel2Trip (ixigo Hackweek ’25)",
+      "description": "Video-to-itinerary AI (Gemini/GPT-4), IG DM webhooks, 70% cost cut, ZEP chat",
       "href": "#",
-      "cta": "View Project",
-      "className": "col-span-2 row-span-1",
-      "background": {
-        "type": "gradient",
-        "from": "blue-500/20",
-        "to": "purple-500/20"
-      },
-      "icon": "ChatBubbleIcon"
-    },
-   
-    {
-      "id": "mobile-fitness-app",
-      "name": "Mobile Fitness App",
-      "description": "React Native app with workout tracking and social features",
-      "href": "#",
-      "cta": "Download",
+      "cta": "Live",
+      "status": "Production",
       "className": "col-span-1 row-span-1",
       "background": {
-        "type": "gradient",
-        "from": "orange-500/20",
-        "to": "red-500/20"
-      },
-      "icon": "MobileIcon"
-    },
-    {
-      "id": "devops-pipeline",
-      "name": "DevOps Pipeline",
-      "description": "Automated CI/CD with Docker, Kubernetes, and monitoring",
-      "href": "#",
-      "cta": "GitHub",
-      "className": "col-span-1 row-span-1",
-      "background": {
-        "type": "gradient",
-        "from": "gray-500/20",
-        "to": "slate-500/20"
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1502920917128-1aa500764b8a?q=80&w=1600&auto=format&fit=crop"
       },
       "icon": "RocketIcon"
     },
     {
-      "id": "realtime-analytics",
-      "name": "Real-time Analytics",
-      "description": "Dashboard with live data visualization and machine learning insights",
+      "id": "auth-mcp-oauth-framework",
+      "name": "Auth MCP OAuth Framework",
+      "description": "OAuth 2.0 for MCP with PKCE, AES-256, auto-refresh, multi-provider; TS SDK",
       "href": "#",
-      "cta": "Explore",
+      "cta": "NPM",
+      "status": "Open Source",
       "className": "col-span-1 row-span-1",
       "background": {
-        "type": "gradient",
-        "from": "yellow-500/20",
-        "to": "amber-500/20"
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
+      },
+      "icon": "CodeIcon"
+    },
+    {
+      "id": "webrtc-voice-ai-poc",
+      "name": "WebRTC Voice AI - Real-time Conversational Agent",
+      "description": "Built a real-time voice AI proof-of-concept using WebRTC for low-latency audio streaming. Integrated Deepgram for live Hindi transcription, OpenAI GPT-3.5 for conversational responses, and AWS Polly for neural voice synthesis. Implemented MediaSoup for optimized WebRTC transport with performance monitoring and latency tracking across the entire pipeline.",
+      "href": "#",
+      "cta": "View Demo",
+      "status": "POC",
+      "className": "col-span-2 row-span-1",
+      "background": {
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1589254065878-42c9da997008?q=80&w=1600&auto=format&fit=crop"
+      },
+       "icon": "ChatBubbleIcon"
+    },
+    {
+      
+      "id": "isro-xray-burst-automation",
+      "name": "ISRO X-Ray Burst Automation",
+      "description": "React system to identify solar bursts; data segregation; Silver medal at Inter IIT",
+      "href": "#",
+      "cta": "Case Study",
+      "status": "Awarded",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?q=80&w=1600&auto=format&fit=crop"
       },
       "icon": "LightningBoltIcon"
     },
     {
-      "id": "social-media-tool",
-      "name": "Social Media Tool",
-      "description": "Content scheduling and analytics platform for creators",
+      "id": "ml-project-cs771",
+      "name": "Machine Learning Project - CS771",
+      "description": "Developed linear models (Linear SVC, Logistic Regression) to crack XORRO PUF with 99% accuracy. Implemented Decision Trees for Hangman-Wordle hybrid achieving 100% accuracy with 3.99 avg query rate. Built ML models for air quality sensor calibration using Elastic Net and Extra Tree Regressor, achieving MAE of 1.67 for O3 and 1.01 for NO2.",
       "href": "#",
-      "cta": "Try Now",
-      "className": "col-span-1 row-span-1",
+      "cta": "View Details",
+      "status": "Academic",
+      "className": "col-span-2 row-span-1",
       "background": {
-        "type": "gradient",
-        "from": "pink-500/20",
-        "to": "rose-500/20"
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1600&auto=format&fit=crop"
       },
-      "icon": "HeartIcon"
+      "icon": "CodeIcon"
     },
     {
-      "id": "open-source-library",
-      "name": "Open Source Library",
-      "description": "Popular React component library with 10k+ GitHub stars",
+      "id": "conways-game-of-life",
+      "name": "Conway's Game of Life - Stanford CS106a",
+      "description": "Completed Stanford's foundational programming course and developed Python simulation of Conway's Game of Life using pygame and numpy. Created dynamic population growth models with cellular automaton, state transitions, and neighborhood configurations. Enhanced algorithmic problem-solving skills and gained proficiency in image processing and GUI development.",
       "href": "#",
-      "cta": "Star on GitHub",
+      "cta": "View Project",
+      "status": "Academic",
       "className": "col-span-1 row-span-1",
       "background": {
-        "type": "gradient",
-        "from": "indigo-500/20",
-        "to": "violet-500/20"
-      },
-      "icon": "StarIcon"
-    },
-    {
-      "id": "ai-image-generator",
-      "name": "AI Image Generator",
-      "description": "Text-to-image generation with custom style transfer",
-      "href": "#",
-      "cta": "Generate",
-      "className": "col-span-1 row-span-1",
-      "background": {
-        "type": "gradient",
-        "from": "teal-500/20",
-        "to": "cyan-500/20"
-      },
-      "icon": "CameraIcon"
-    },
-    {
-      "id": "code-automation",
-      "name": "Code Automation",
-      "description": "AI-powered code generation and refactoring tools",
-      "href": "#",
-      "cta": "Learn More",
-      "className": "col-span-1 row-span-1",
-      "background": {
-        "type": "gradient",
-        "from": "purple-500/20",
-        "to": "fuchsia-500/20"
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1600&auto=format&fit=crop"
       },
       "icon": "MagicWandIcon"
     },
     {
-      "id": "blockchain-dapp",
-      "name": "Blockchain DApp",
-      "description": "Decentralized application with smart contracts and Web3 integration",
-      "href": "#",
-      "cta": "Connect Wallet",
-      "className": "col-span-1 row-span-1",
+      "id": "techkriti-2023-por",
+      "name": "Techkriti'23 - Head Web & App",
+      "description": "Revamped the entire tech architecture for IIT Kanpur's flagship fest while leading a 3-tier development team. Optimized the large MERN codebase through Webpack compression and performance enhancements. Successfully handled 350K+ monthly visits and 30K+ daily traffic, maintained 15K+ active users, and drove 30% YoY growth across 10+ corporate partnerships.",
+      "href": "https://techkriti.org",
+      "cta": "View Live",
+      "status": "live",
+      "className": "col-span-2 row-span-1",
       "background": {
-        "type": "gradient",
-        "from": "emerald-500/20",
-        "to": "green-500/20"
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1502920917128-1aa500764b8a?q=80&w=1600&auto=format&fit=crop"
       },
-      "icon": "CodeIcon"
+      "icon": "GlobeIcon"
     }
+    
   ]
 }

@@ -8,6 +8,7 @@ import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { PDFModal } from "@/components/ui/pdf-modal";
+import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { cn } from "@/lib/utils";
 import { RecentUpdatesData, colorMap, textColorMap, categoryIconPaths, categoryStyles } from "@/types/updates";
 import recentUpdatesData from "@/data/recent-updates.json";
@@ -18,7 +19,7 @@ export default function Home() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background text-foreground smooth-scroll-enhanced">
       <NavigationDock />
 
       {/* Fixed Full-Screen Animated Grid Pattern Background */}
@@ -36,7 +37,7 @@ export default function Home() {
       />
 
       {/* Introduction Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden z-10">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 scroll-snap-section scroll-offset">
         <div className="relative z-10 container mx-auto px-4 py-0">
           <div className="flex items-center justify-between gap-8">
             
@@ -196,22 +197,22 @@ export default function Home() {
       </section>
 
       {/* Hero Section */}
-      <div id="experience">
+      <div id="experience" className="scroll-snap-section scroll-offset">
         <ExperienceSection />
       </div>
 
       {/* Projects Section */}
-      <div id="projects">
+      <div id="projects" className="scroll-snap-section scroll-offset">
         <ProjectsSection />
       </div>
 
       {/* Skills Section */}
-      <div id="skills">
+      <div id="skills" className="scroll-snap-section scroll-offset">
         <SkillsSection />
       </div>
 
       {/* Contact Section */}
-      <div id="contact">
+      <div id="contact" className="scroll-snap-section scroll-offset">
         <ContactSection />
       </div>
            
@@ -224,6 +225,9 @@ export default function Home() {
         githubUrl="https://github.com/swayamg20/resume"
         driveUrl="https://drive.google.com/file/d/13r_8pPvV9I1T3d6l489x7d2-fT7-ZVQq/view?usp=sharing"
       />
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </main>
   )
 }

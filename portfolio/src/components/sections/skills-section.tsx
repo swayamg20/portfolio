@@ -9,7 +9,7 @@ import skillsData from "@/data/skills.json";
 import articlesData from "@/data/articles.json";
 
 export function SkillsSection() {
-  const { coreSkills, advancedSkills } = skillsData as SkillsData;
+  const { skills } = skillsData as SkillsData;
   const { articles } = articlesData as ArticlesData;
 
   return (
@@ -44,8 +44,7 @@ export function SkillsSection() {
 
             {/* Skills Grid */}
             <SkillsGrid 
-              coreSkills={coreSkills}
-              advancedSkills={advancedSkills}
+              skills={skills}
             />
           </div>
 

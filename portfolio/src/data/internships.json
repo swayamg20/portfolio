@@ -1,51 +1,48 @@
 {
   "internships": [
     {
-      "id": "intern-1",
-      "company": "Tech Startup Inc",
-      "companyUrl": "https://techstartup.com",
-      "role": "Frontend Developer Intern",
-      "duration": "Jun 2023 - Aug 2023",
-      "location": "San Francisco, CA",
-      "description": "Worked on React-based user interfaces for customer dashboard",
-      "achievements": [
-        "Implemented responsive design for mobile users, increasing mobile engagement by 30%",
-        "Collaborated with design team to create reusable component library",
-        "Optimized app performance reducing load time by 25%"
-      ],
-      "technologies": ["React", "TypeScript", "Tailwind CSS", "Redux", "Figma"],
+      "id": "fischer-jordan-2023",
+      "company": "Fischer Jordan",
+      "role": "Software Engineer (Intern)",
+      "duration": "Jun’23 - Feb’24",
+      "location": "Remote",
+      "description": "Built a React client management portal with Redux and REST APIs. Added WebSocket real-time features for live updates and collaboration.",
+      "achievements": [],
+      "technologies": ["React", "Redux", "REST", "WebSocket", "TypeScript", "Node.js"],
       "type": "remote"
     },
     {
-      "id": "intern-2", 
-      "company": "Digital Agency Co",
-      "role": "Full Stack Intern",
-      "duration": "Jan 2023 - May 2023",
-      "location": "New York, NY",
-      "description": "Built end-to-end web applications for client projects",
-      "achievements": [
-        "Developed 3 client websites from scratch using modern tech stack",
-        "Integrated payment systems and user authentication",
-        "Mentored 2 junior interns on best practices"
-      ],
-      "technologies": ["Next.js", "Node.js", "PostgreSQL", "Stripe API", "Docker"],
-      "type": "hybrid"
+      "id": "llama-mindfulness-2023",
+      "company": "Llama Mindfulness",
+      "role": "Backend Developer (Intern)",
+      "duration": "Apr’23 - Jun’23",
+      "location": "Remote",
+      "description": "Developed Node.js backend with Slack Bolt integration and event handling. Configured Moodle LMS plugins and built a JS admin portal.",
+      "achievements": [],
+      "technologies": ["Node.js", "Slack Bolt", "Express", "Moodle", "JavaScript"],
+      "type": "remote"
     },
     {
-      "id": "intern-3",
-      "company": "Innovation Labs",
-      "companyUrl": "https://innovationlabs.io",
-      "role": "Software Engineering Intern",
-      "duration": "Jun 2022 - Aug 2022",
-      "location": "Boston, MA", 
-      "description": "Contributed to machine learning pipeline and data visualization tools",
-      "achievements": [
-        "Built data visualization dashboard processing 1M+ records",
-        "Implemented automated testing suite improving code coverage to 90%",
-        "Presented findings to senior leadership team"
-      ],
-      "technologies": ["Python", "Django", "Chart.js", "AWS", "Docker", "PostgreSQL"],
-      "type": "onsite"
+      "id": "vaticinari-2023",
+      "company": "Vaticinari Solutions",
+      "role": "Cybersecurity Analyst (Intern)",
+      "duration": "Jul’23 - Sep’23",
+      "location": "Remote",
+      "description": "Performed threat analysis using Neo4j graphs and BloodHound AD mapping. Processed CVE datasets to identify exposure and prioritize fixes.",
+      "achievements": [],
+      "technologies": ["Neo4j", "BloodHound", "Python", "CVE", "Data Processing"],
+      "type": "remote"
+    },
+    {
+      "id": "c3i-hub-2021",
+      "company": "C3i Hub, IIT Kanpur",
+      "role": "Software Developer (Intern)",
+      "duration": "Jul’21 - Jul’22",
+      "location": "Kanpur / Remote",
+      "description": "Integrated Drupal CMS with Composer and custom modules. Built Threatmap frontend in React, backed by Express APIs.",
+      "achievements": [],
+      "technologies": ["Drupal", "PHP", "Composer", "React", "Express", "JavaScript"],
+      "type": "hybrid"
     }
   ]
 }

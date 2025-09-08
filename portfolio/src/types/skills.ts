@@ -6,6 +6,5 @@ export interface Skill {
 }
 
 export interface SkillsData {
-  coreSkills: Skill[];
-  advancedSkills: Skill[];
+  skills: Skill[];
 }

@@ -1,4 +1,5 @@
 export { NavigationDock, MainNavigationDock, SocialNavigationDock } from './navigation-dock';
+export { ScrollToTop } from './scroll-to-top';
 export { Timeline } from './timeline';
 export { ArticleCard, ArticleList } from './article-card';
 export { ProjectGrid } from './project-grid';

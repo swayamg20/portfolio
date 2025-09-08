@@ -124,39 +124,50 @@ const NAVIGATION_DATA = {
   ],
 };
 
-// Smooth scroll function
-const smoothScrollTo = (elementId: string) => {
+// Enhanced smooth scroll function with better options
+const smoothScrollTo = (elementId: string, offset: number = 80) => {
   const element = document.getElementById(elementId);
   if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+    const elementPosition = element.offsetTop - offset;
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth'
     });
   }
 };
 
-// Hook to detect active section
+// Enhanced hook to detect active section with throttling
 const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'experience', 'projects', 'skills', 'contact'];
-      const scrollPosition = window.scrollY + 100; // Offset for better detection
+    let ticking = false;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const sections = ['home', 'experience', 'projects', 'skills', 'contact'];
+          const scrollPosition = window.scrollY + 120; // Offset for better detection
+          
+          // Find the section that's currently in view
+          let currentSection = 'home';
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            const element = document.getElementById(section);
+            if (element && scrollPosition >= element.offsetTop - 100) {
+              currentSection = section;
+              break;
+            }
           }
-        }
+          
+          setActiveSection(currentSection);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Check initial position
 
     return () => window.removeEventListener('scroll', handleScroll);

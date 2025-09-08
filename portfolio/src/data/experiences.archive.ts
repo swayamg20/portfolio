@@ -1,0 +1,65 @@
+/*
+  Archived experiences (preserved per request). Not imported by the UI.
+*/
+
+import { Experience } from "@/types/experiences";
+
+export const ARCHIVED_EXPERIENCES: Experience[] = [
+  {
+    id: "ixigo-2024",
+    company: "ixigo",
+    companyUrl: "https://www.ixigo.com",
+    role: "Software Engineering 2 - AI Products",
+    duration: "Aug'24 - Present",
+    description:
+      "Building production ready Voice AI systems (STT–LLM–TTS) and conversational AI infrastructure. Designed & deployed real-time voice bot pipeline with sub-500ms latency using advanced streaming & caching. Built AI SDK & multi-agent orchestration system with dynamic tools and detailed LLM observability.",
+    technologies: [
+      "RTC",
+      "SSE",
+      "LLM",
+      "Voice AI",
+      "ZEP Memory",
+      "Python",
+      "Context-Aware Systems",
+      "STT",
+      "TTS",
+      "ElevenLabs",
+      "Twilio",
+      "Real-time Streaming",
+      "TypeScript",
+      "Node.js",
+      "React",
+      "Redis",
+      "Voice UX",
+      "Animations"
+    ]
+  },
+  {
+    id: "overlayy-2022",
+    company: "overlayy AI",
+    companyUrl: "https://overlayy.ai",
+    role: "Founding Engineer",
+    duration: "Apr'24 - Aug'24",
+    description:
+      "Built entire tech infrastructure from scratch as founding engineer, establishing scalable systems and architecture. Architected & built complete tech infrastructure from ground zero - LLM pipelines, AWS DevOps, microservices & CI/CD automation. Developed secure WebSocket messaging system with API authorization & custom ClickHouse analytics solution from scratch.",
+    technologies: [
+      "LLM",
+      "RAG",
+      "AWS",
+      "DevOps",
+      "CI/CD",
+      "Elixir",
+      "Phoenix",
+      "WebSocket",
+      "ClickHouse",
+      "Analytics",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Microservices"
+    ]
+  }
+];
+
+
+
