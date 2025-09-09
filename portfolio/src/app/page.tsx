@@ -84,7 +84,7 @@ export default function Home() {
                 className="text-lg text-muted-foreground max-w-xl leading-relaxed"
                 animation="blurInUp" by="line" once duration={0.5}
               >
-                I am a 2024 batch graduate from IIT Kanpur, with a degree in Materials Science and Engineering, but interests in tech. Currently working as a Software Engineer 2 at ixigo, AI Products.
+                I am a 2024 batch graduate from IIT Kanpur, with a degree in Materials Science and Engineering and interests in tech. Currently working as a Software Engineer 2 at ixigo, AI Products.
               </TextAnimate>
 
               

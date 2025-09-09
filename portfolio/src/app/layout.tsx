@@ -29,8 +29,8 @@ const sourceCodePro = Source_Code_Pro({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio - Magic UI Components',
-  description: 'A beautiful portfolio showcasing Magic UI components',
+  title: 'Swayam Gupta - Portfolio',
+  description: '',
 }
 
 export default function RootLayout({

@@ -13,12 +13,23 @@
         "type": "solid",
         "color": "bg-purple-300 dark:bg-purple-700"
       },
-      "icon": "CodeIcon"
+      "icon": "CodeIcon",
+      "keyFeatures": [
+        "5 specialized MCP servers for different automation tasks",
+        "Native macOS OCR using Vision framework",
+        "Mouse/keyboard automation with RobotJS",
+        "Battery monitoring and thermal management",
+        "Local SQLite analytics with privacy protection",
+        "Natural language shortcut creation",
+        "Claude Desktop integration ready"
+      ],
+      "techStack": ["JavaScript", "Node.js", "SQLite", "AppleScript", "RobotJS", "macOS Vision API", "MCP Protocol"],
+      "githubUrl": "https://github.com/swayamg20/mac-os-automation-mcp"
     },
     {
       "id": "reel2trip-ixigo-hackweek-25",
       "name": "Reel2Trip (ixigo Hackweek '25)",
-      "description": "AI-powered travel itinerary generator that transforms Instagram Reels and YouTube Shorts into personalized travel plans. Features Instagram DM integration, smart destination identification, day-wise activity planning, flight recommendations, and chat-based customization with MILO bot. Built with Gemini/GPT-4 AI, reducing manual planning effort by 70% while seamlessly integrating into ixigo's flight booking ecosystem.",
+      "description": "AI-powered travel itinerary generator that transforms Instagram Reels and YouTube Shorts into personalized travel plans. Simply share any travel reel with @planbyixigo on Instagram to get instant AI-generated itineraries. Features Instagram DM integration, smart destination identification, day-wise activity planning, flight recommendations, and chat-based customization with MILO bot. Built with Gemini/GPT-4 AI, reducing manual planning effort by 70% while seamlessly integrating into ixigo's flight booking ecosystem.",
       "href": "#",
       "cta": "View Demo",
       "status": "Production",
@@ -27,7 +38,18 @@
         "type": "solid",
         "color": "bg-blue-300 dark:bg-blue-700"
       },
-      "icon": "RocketIcon"
+      "icon": "RocketIcon",
+      "keyFeatures": [
+        "Instagram DM integration (@PLAN account)",
+        "AI-powered destination identification from videos",
+        "Day-wise itinerary generation",
+        "Flight booking integration with ixigo",
+        "MILO chatbot for itinerary customization",
+        "Wishlist functionality for saving plans",
+        "70% reduction in manual planning effort"
+      ],
+      "techStack": ["Gemini AI", "GPT-4", "Instagram API", "YouTube API", "React", "Node.js", "ZEP Chat"],
+      "instagramUrl": "https://instagram.com/planbyixigo"
     },
     {
       "id": "auth-mcp-oauth-framework",
@@ -41,7 +63,17 @@
         "type": "solid",
         "color": "bg-emerald-300 dark:bg-emerald-700"
       },
-      "icon": "CodeIcon"
+      "icon": "CodeIcon",
+      "keyFeatures": [
+        "OAuth 2.0 with PKCE security",
+        "AES-256 token encryption",
+        "Automatic token refresh",
+        "Multi-provider support",
+        "TypeScript SDK included",
+        "MCP protocol integration"
+      ],
+      "techStack": ["TypeScript", "OAuth 2.0", "PKCE", "AES-256", "Node.js", "MCP Protocol"],
+      "githubUrl": "https://github.com/swayamg20/mcp-framework"
     },
     {
       "id": "webrtc-voice-ai-poc",
@@ -55,22 +87,44 @@
         "type": "solid",
         "color": "bg-amber-300 dark:bg-amber-700"
       },
-       "icon": "ChatBubbleIcon"
+       "icon": "ChatBubbleIcon",
+      "keyFeatures": [
+        "Real-time WebRTC audio streaming",
+        "Live Hindi transcription with Deepgram",
+        "GPT-3.5 conversational AI responses",
+        "AWS Polly neural voice synthesis",
+        "MediaSoup optimized transport",
+        "Performance monitoring and latency tracking",
+        "Low-latency end-to-end pipeline"
+      ],
+      "techStack": ["WebRTC", "MediaSoup", "Deepgram", "OpenAI GPT-3.5", "AWS Polly", "Node.js", "React"],
+      "githubUrl": "https://github.com/swayamg20/webrtc-voice-ai"
     },
     {
       
       "id": "isro-xray-burst-automation",
       "name": "ISRO X-Ray Burst Automation",
-      "description": "React system to identify solar bursts; data segregation; Silver medal at Inter IIT",
+      "description": "Developed a comprehensive web-based automated system for identifying solar X-ray bursts using ReactJS framework with advanced data segregation features. Led end-to-end product documentation, user journey design, and research orchestration. Organized curve data management through React hooks and JSON structures for seamless API integration. Achieved Silver Medal in Inter IIT mid-prep event, contributing to IIT Kanpur's 2nd position overall.",
       "href": "#",
       "cta": "Case Study",
       "status": "Awarded",
-      "className": "col-span-1 row-span-1",
+      "className": "col-span-2 row-span-1",
       "background": {
         "type": "solid",
         "color": "bg-pink-300 dark:bg-pink-700"
       },
-      "icon": "LightningBoltIcon"
+      "icon": "LightningBoltIcon",
+      "keyFeatures": [
+        "Automated solar X-ray burst identification system",
+        "ReactJS framework with data segregation features",
+        "React hooks and JSON-based curve data organization",
+        "Seamless API integration for server communication",
+        "End-to-end product documentation leadership",
+        "User journey design and research orchestration",
+        "Silver Medal in Inter IIT mid-prep event",
+        "Contributed to IIT Kanpur's 2nd position overall"
+      ],
+      "techStack": ["ReactJS", "React Hooks", "JSON", "API Integration", "Data Visualization", "Product Documentation", "User Research"]
     },
     {
       "id": "ml-project-cs771",
@@ -84,7 +138,16 @@
         "type": "solid",
         "color": "bg-indigo-300 dark:bg-indigo-700"
       },
-      "icon": "CodeIcon"
+      "icon": "CodeIcon",
+      "keyFeatures": [
+        "XORRO PUF cracking with 99% accuracy",
+        "Hangman-Wordle hybrid with 100% accuracy",
+        "Air quality sensor calibration models",
+        "MAE of 1.67 for O3 and 1.01 for NO2",
+        "Multiple ML algorithm implementations",
+        "Performance optimization and evaluation"
+      ],
+      "techStack": ["Python", "Linear SVC", "Logistic Regression", "Decision Trees", "Elastic Net", "Extra Tree Regressor", "scikit-learn"]
     },
     {
       "id": "conways-game-of-life",
@@ -98,13 +161,24 @@
         "type": "solid",
         "color": "bg-cyan-300 dark:bg-cyan-700"
       },
-      "icon": "MagicWandIcon"
+      "icon": "MagicWandIcon",
+      "keyFeatures": [
+        "Interactive cellular automaton simulation",
+        "Dynamic population growth modeling",
+        "Real-time state transitions",
+        "Configurable neighborhood rules",
+        "Pygame-based GUI interface",
+        "Stanford CS106a completion"
+      ],
+      "techStack": ["Python", "pygame", "numpy", "Cellular Automaton", "GUI Development", "Algorithms"],
+      "githubUrl": "https://github.com/swayamgupta/conways-game-of-life"
     },
     {
       "id": "techkriti-2023-por",
       "name": "Techkriti'23 - Head Web & App",
       "description": "Revamped the entire tech architecture for IIT Kanpur's flagship fest while leading a 3-tier development team. Optimized the large MERN codebase through Webpack compression and performance enhancements. Successfully handled 350K+ monthly visits and 30K+ daily traffic, maintained 15K+ active users, and drove 30% YoY growth across 10+ corporate partnerships.",
       "href": "https://techkriti.org",
+      "liveUrl": "https://techkriti.org",
       "cta": "View Live",
       "status": "live",
       "className": "col-span-2 row-span-1",
@@ -112,7 +186,17 @@
         "type": "solid",
         "color": "bg-teal-300 dark:bg-teal-700"
       },
-      "icon": "GlobeIcon"
+      "icon": "GlobeIcon",
+      "keyFeatures": [
+        "Complete tech architecture overhaul",
+        "350K+ monthly visits handling",
+        "30K+ daily traffic management",
+        "15K+ active user base",
+        "30% YoY growth achievement",
+        "10+ corporate partnerships",
+        "3-tier development team leadership"
+      ],
+      "techStack": ["MERN Stack", "MongoDB", "Express.js", "React", "Node.js", "Webpack", "Performance Optimization"]
     }
     
   ]

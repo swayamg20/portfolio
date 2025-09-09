@@ -125,7 +125,7 @@ export function ContactSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-foreground">
-                    Name *
+                    Name (Optional)
                   </label>
                   <input
                     type="text"
@@ -133,7 +133,6 @@ export function ContactSection() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    required
                     className={cn(
                       "w-full px-4 py-3 rounded-lg border border-border/50",
                       "bg-background/50 backdrop-blur-sm",
@@ -147,7 +146,7 @@ export function ContactSection() {
                 
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium text-foreground">
-                    Email *
+                    Email (Optional)
                   </label>
                   <input
                     type="email"
@@ -155,7 +154,6 @@ export function ContactSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    required
                     className={cn(
                       "w-full px-4 py-3 rounded-lg border border-border/50",
                       "bg-background/50 backdrop-blur-sm",
@@ -173,14 +171,13 @@ export function ContactSection() {
               {/* Message */}
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium text-foreground">
-                  Message *
+                  Message (Optional)
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  required
                   rows={6}
                   className={cn(
                     "w-full px-4 py-3 rounded-lg border border-border/50",

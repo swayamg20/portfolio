@@ -18,6 +18,11 @@ export interface Project {
   background: ProjectBackground;
   icon: string;
   status?: string;
+  keyFeatures?: string[];
+  techStack?: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+  instagramUrl?: string;
 }
 
 export interface ProjectsData {
