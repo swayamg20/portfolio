@@ -297,4 +297,40 @@
       transition-duration: 0.01ms !important;
     }
   }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    /* Improve touch targets */
+    button, a[role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better text sizing for mobile */
+    .text-responsive {
+      font-size: clamp(0.875rem, 2.5vw, 1rem);
+    }
+    
+    /* Mobile-friendly spacing */
+    .space-y-mobile > * + * {
+      margin-top: 0.75rem;
+    }
+    
+    .space-y-mobile-lg > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
 }

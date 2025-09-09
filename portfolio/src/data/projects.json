@@ -31,7 +31,6 @@
       "name": "Reel2Trip (ixigo Hackweek '25)",
       "description": "AI-powered travel itinerary generator that transforms Instagram Reels and YouTube Shorts into personalized travel plans. Simply share any travel reel with @planbyixigo on Instagram to get instant AI-generated itineraries. Features Instagram DM integration, smart destination identification, day-wise activity planning, flight recommendations, and chat-based customization with MILO bot. Built with Gemini/GPT-4 AI, reducing manual planning effort by 70% while seamlessly integrating into ixigo's flight booking ecosystem.",
       "href": "#",
-      "cta": "View Demo",
       "status": "Production",
       "className": "col-span-2 row-span-1",
       "background": {
@@ -54,9 +53,8 @@
     {
       "id": "auth-mcp-oauth-framework",
       "name": "Auth MCP OAuth Framework",
-      "description": "OAuth 2.0 for MCP with PKCE, AES-256, auto-refresh, multi-provider; TS SDK",
+      "description": "Architected a production-ready OAuth 2.0 framework for MCP servers, reducing implementation complexity by 90% for developer experience. Built enterprise authentication system with PKCE flow, AES-256 encryption, automated token refresh, and multi-provider support. Published open-source npm package with comprehensive documentation, TypeScript definitions, and developer-friendly APIs following modular architecture. Led end-to-end development of first-to-market OAuth solution for MCP ecosystem, establishing production standards and compatibility.",
       "href": "#",
-      "cta": "NPM",
       "status": "Open Source",
       "className": "col-span-1 row-span-1",
       "background": {
@@ -65,14 +63,16 @@
       },
       "icon": "CodeIcon",
       "keyFeatures": [
-        "OAuth 2.0 with PKCE security",
-        "AES-256 token encryption",
-        "Automatic token refresh",
-        "Multi-provider support",
-        "TypeScript SDK included",
-        "MCP protocol integration"
+        "90% reduction in implementation complexity for developers",
+        "Production-ready OAuth 2.0 framework for MCP servers",
+        "Enterprise authentication with PKCE security flow",
+        "AES-256 token encryption and automated refresh",
+        "Multi-provider support with modular architecture",
+        "Comprehensive TypeScript definitions and documentation",
+        "First-to-market OAuth solution for MCP ecosystem",
+        "Established production standards and compatibility"
       ],
-      "techStack": ["TypeScript", "OAuth 2.0", "PKCE", "AES-256", "Node.js", "MCP Protocol"],
+      "techStack": ["TypeScript", "OAuth 2.0", "PKCE", "AES-256", "Node.js", "MCP Protocol", "NPM", "Enterprise Security"],
       "githubUrl": "https://github.com/swayamg20/mcp-framework"
     },
     {
@@ -80,7 +80,6 @@
       "name": "WebRTC Voice AI - Real-time Conversational Agent",
       "description": "Built a real-time voice AI proof-of-concept using WebRTC for low-latency audio streaming. Integrated Deepgram for live Hindi transcription, OpenAI GPT-3.5 for conversational responses, and AWS Polly for neural voice synthesis. Implemented MediaSoup for optimized WebRTC transport with performance monitoring and latency tracking across the entire pipeline.",
       "href": "#",
-      "cta": "View Demo",
       "status": "POC",
       "className": "col-span-2 row-span-1",
       "background": {
@@ -106,7 +105,6 @@
       "name": "ISRO X-Ray Burst Automation",
       "description": "Developed a comprehensive web-based automated system for identifying solar X-ray bursts using ReactJS framework with advanced data segregation features. Led end-to-end product documentation, user journey design, and research orchestration. Organized curve data management through React hooks and JSON structures for seamless API integration. Achieved Silver Medal in Inter IIT mid-prep event, contributing to IIT Kanpur's 2nd position overall.",
       "href": "#",
-      "cta": "Case Study",
       "status": "Awarded",
       "className": "col-span-2 row-span-1",
       "background": {
@@ -127,55 +125,32 @@
       "techStack": ["ReactJS", "React Hooks", "JSON", "API Integration", "Data Visualization", "Product Documentation", "User Research"]
     },
     {
-      "id": "ml-project-cs771",
-      "name": "Machine Learning Project - CS771",
-      "description": "Developed linear models (Linear SVC, Logistic Regression) to crack XORRO PUF with 99% accuracy. Implemented Decision Trees for Hangman-Wordle hybrid achieving 100% accuracy with 3.99 avg query rate. Built ML models for air quality sensor calibration using Elastic Net and Extra Tree Regressor, achieving MAE of 1.67 for O3 and 1.01 for NO2.",
+      "id": "journal-scrapper-data-mining",
+      "name": "Journal Scrapper for Data Mining",
+      "description": "Automated system for fetching .ris/.bib files, extracting author details programmatically, and optimizing data retrieval processes. Proficiently conducted NER (Named Entity Recognition) to extract author entities and DOI URLs from scholarly articles. Used Scopus Cited By API to implement citation counts of input journals, enhancing tool functionality & data accuracy. Seamlessly connected Flask app and frontend through REST-based API calls.",
       "href": "#",
-      "cta": "View Details",
-      "status": "Academic",
+      "status": "Academic Research",
       "className": "col-span-2 row-span-1",
       "background": {
         "type": "solid",
         "color": "bg-indigo-300 dark:bg-indigo-700"
       },
-      "icon": "CodeIcon",
-      "keyFeatures": [
-        "XORRO PUF cracking with 99% accuracy",
-        "Hangman-Wordle hybrid with 100% accuracy",
-        "Air quality sensor calibration models",
-        "MAE of 1.67 for O3 and 1.01 for NO2",
-        "Multiple ML algorithm implementations",
-        "Performance optimization and evaluation"
-      ],
-      "techStack": ["Python", "Linear SVC", "Logistic Regression", "Decision Trees", "Elastic Net", "Extra Tree Regressor", "scikit-learn"]
-    },
-    {
-      "id": "conways-game-of-life",
-      "name": "Conway's Game of Life - Stanford CS106a",
-      "description": "Completed Stanford's foundational programming course and developed Python simulation of Conway's Game of Life using pygame and numpy. Created dynamic population growth models with cellular automaton, state transitions, and neighborhood configurations. Enhanced algorithmic problem-solving skills and gained proficiency in image processing and GUI development.",
-      "href": "#",
-      "cta": "View Project",
-      "status": "Academic",
-      "className": "col-span-1 row-span-1",
-      "background": {
-        "type": "solid",
-        "color": "bg-cyan-300 dark:bg-cyan-700"
-      },
       "icon": "MagicWandIcon",
       "keyFeatures": [
-        "Interactive cellular automaton simulation",
-        "Dynamic population growth modeling",
-        "Real-time state transitions",
-        "Configurable neighborhood rules",
-        "Pygame-based GUI interface",
-        "Stanford CS106a completion"
+        "Automated .ris/.bib file fetching and processing",
+        "Named Entity Recognition for author extraction",
+        "DOI URL extraction from scholarly articles",
+        "Scopus Cited By API integration",
+        "Citation count tracking and analysis",
+        "Flask backend with REST API architecture",
+        "Optimized data retrieval processes"
       ],
-      "techStack": ["Python", "pygame", "numpy", "Cellular Automaton", "GUI Development", "Algorithms"],
-      "githubUrl": "https://github.com/swayamgupta/conways-game-of-life"
+      "techStack": ["Python", "Flask", "NER", "Scopus API", "REST API", "Data Mining", "Natural Language Processing"],
+      "githubUrl": "https://github.com/swayamg20/journal-scrapper-data-mining"
     },
     {
       "id": "techkriti-2023-por",
-      "name": "Techkriti'23 - Head Web & App",
+      "name": "Techkriti'23 - Web & App",
       "description": "Revamped the entire tech architecture for IIT Kanpur's flagship fest while leading a 3-tier development team. Optimized the large MERN codebase through Webpack compression and performance enhancements. Successfully handled 350K+ monthly visits and 30K+ daily traffic, maintained 15K+ active users, and drove 30% YoY growth across 10+ corporate partnerships.",
       "href": "https://techkriti.org",
       "liveUrl": "https://techkriti.org",

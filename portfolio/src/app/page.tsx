@@ -38,15 +38,15 @@ export default function Home() {
 
       {/* Introduction Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 scroll-snap-section scroll-offset">
-        <div className="relative z-10 container mx-auto px-4 py-0">
-          <div className="flex items-center justify-between gap-8">
+        <div className="relative z-10 container mx-auto px-4 py-8 lg:py-0">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-8">
             
-            {/* Left Side - Main Content (60% width) */}
-            <div className="w-[60%] text-left">                    
+            {/* Main Content - Full width on mobile, 60% on desktop */}
+            <div className="w-full lg:w-[60%] text-center lg:text-left">                    
               {/* Hyper Text Name and Title */}
-              <div className="mb-4 space-y-4">
+              <div className="mb-6 lg:mb-4 space-y-4">
                 <TextAnimate 
-                  className="text-4xl md:text-6xl font-bold text-foreground"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground"
                   animation="blurIn"
                   by="character"
                   duration={0.8}
@@ -56,7 +56,7 @@ export default function Home() {
                   Swayam Gupta 
                 </TextAnimate>
                 <TextAnimate 
-                  className="text-2xl md:text-3xl font-medium text-muted-foreground"
+                  className="text-xl sm:text-2xl md:text-3xl font-medium text-muted-foreground"
                   animation="blurInUp"
                   by="character"
                   duration={0.6}
@@ -67,31 +67,33 @@ export default function Home() {
                 </TextAnimate>
               </div>
               
-              <TextAnimate
-                className="text-lg text-muted-foreground max-w-xl leading-relaxed"
-                animation="blurInUp" by="line" once duration={0.5}
-              >
-                A Full Stack Engineer, Building AI Products
-              </TextAnimate>
-              <TextAnimate
-                className="text-lg text-muted-foreground max-w-xl leading-relaxed"
-                animation="blurInUp" by="line" once duration={0.5}
-              >
-                Currently hooked up with conversational voice agents.
-              </TextAnimate>
+              <div className="space-y-4 mx-auto lg:mx-0 max-w-2xl lg:max-w-xl">
+                <TextAnimate
+                  className="text-base sm:text-lg text-muted-foreground leading-relaxed"
+                  animation="blurInUp" by="line" once duration={0.5}
+                >
+                  A Full Stack Engineer, Building AI Products
+                </TextAnimate>
+                <TextAnimate
+                  className="text-base sm:text-lg text-muted-foreground leading-relaxed"
+                  animation="blurInUp" by="line" once duration={0.5}
+                >
+                  Currently hooked up with conversational voice agents.
+                </TextAnimate>
 
-              <TextAnimate
-                className="text-lg text-muted-foreground max-w-xl leading-relaxed"
-                animation="blurInUp" by="line" once duration={0.5}
-              >
-                I am a 2024 batch graduate from IIT Kanpur, with a degree in Materials Science and Engineering and interests in tech. Currently working as a Software Engineer 2 at ixigo, AI Products.
-              </TextAnimate>
+                <TextAnimate
+                  className="text-base sm:text-lg text-muted-foreground leading-relaxed"
+                  animation="blurInUp" by="line" once duration={0.5}
+                >
+                  I am a 2024 batch graduate from IIT Kanpur, with a degree in Materials Science and Engineering and interests in tech. Currently working as a Software Engineer 2 at ixigo, AI Products.
+                </TextAnimate>
+              </div>
 
               
               {/* Resume Button */}
-              <div className="mt-8">
+              <div className="mt-8 lg:mt-8">
                 <InteractiveHoverButton 
-                  className="text-lg font-semibold"
+                  className="text-base sm:text-lg font-semibold px-6 py-3"
                   onClick={() => setIsResumeModalOpen(true)}
                 >
                  Current Resume
@@ -230,7 +232,7 @@ export default function Home() {
         pdfUrl="/portfolio/resume.pdf"
         title="Swayam Gupta - Resume"
         githubUrl="https://github.com/swayamg20/resume"
-        driveUrl="https://drive.google.com/file/d/13r_8pPvV9I1T3d6l489x7d2-fT7-ZVQq/view?usp=sharing"
+        driveUrl="https://drive.google.com/drive/folders/1ruz68bhMktNFr1egd2pKdgAx_zjMDW7E?usp=drive_link"
       />
 
       {/* Scroll to Top Button */}

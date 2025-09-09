@@ -20,9 +20,9 @@ export function ExperienceSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       
       {/* Section Header */}
-      <div className="relative z-10 text-center mb-12 mt-8 px-4">
+      <div className="relative z-10 text-center mb-8 sm:mb-12 mt-6 sm:mt-8 px-4">
         <TextAnimate
-          className="text-4xl md:text-6xl font-bold text-foreground mb-4"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4"
           animation="blurInUp"
           by="word"
           duration={0.8}
@@ -32,7 +32,7 @@ export function ExperienceSection() {
           Experience Journey
         </TextAnimate>
         <TextAnimate
-          className="text-xl text-muted-foreground max-w-2xl mx-auto"
+          className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto"
           animation="blurInUp"
           by="word"
           delay={300}
@@ -50,19 +50,19 @@ export function ExperienceSection() {
       </div>
       
       {/* Internships Button */}
-      <div className="relative z-10 mb-16">
+      <div className="relative z-10 mb-8 sm:mb-16">
         <button
           onClick={() => setIsInternshipsModalOpen(true)}
-          className="group relative flex items-center gap-3 px-6 py-3 
+          className="group relative flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 
                      bg-card/60 backdrop-blur-sm border border-border rounded-2xl
                      shadow-xl shadow-black/5 dark:shadow-black/30
                      hover:shadow-2xl hover:shadow-black/10 dark:hover:shadow-black/40 
                      hover:bg-card/80 hover:scale-105 transition-all duration-300
                      text-foreground font-medium"
         >
-          <History className="w-5 h-5 text-primary group-hover:rotate-12 transition-transform duration-300" />
+          <History className="w-4 h-4 sm:w-5 sm:h-5 text-primary group-hover:rotate-12 transition-transform duration-300" />
           <TextAnimate
-            className="text-base"
+            className="text-sm sm:text-base"
             animation="fadeIn"
             by="line"
             startOnView={true}

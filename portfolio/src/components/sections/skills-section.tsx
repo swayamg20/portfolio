@@ -13,15 +13,15 @@ export function SkillsSection() {
   const { articles } = articlesData as ArticlesData;
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           
           {/* Left Side - Skills Grid */}
           <div className="relative">
-            <div className="text-center mb-8">
+            <div className="text-center lg:text-left mb-6 sm:mb-8">
               <TextAnimate
-                className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4"
                 animation="blurInUp"
                 by="character"
                 duration={0.6}
@@ -31,7 +31,7 @@ export function SkillsSection() {
                 Skills
               </TextAnimate>
               <TextAnimate
-                className="text-lg text-muted-foreground"
+                className="text-base sm:text-lg text-muted-foreground"
                 animation="blurInUp"
                 by="character"
                 duration={0.5}
@@ -49,10 +49,10 @@ export function SkillsSection() {
           </div>
 
           {/* Right Side - Articles */}
-          <div>
-            <div className="mb-8">
+          <div className="">
+            <div className="mb-6 sm:mb-8 text-center lg:text-left">
               <TextAnimate
-                className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4"
                 animation="blurInUp"
                 by="character"
                 duration={0.6}
@@ -62,7 +62,7 @@ export function SkillsSection() {
                 Recent Articles
               </TextAnimate>
               <TextAnimate
-                className="text-lg text-muted-foreground"
+                className="text-base sm:text-lg text-muted-foreground"
                 animation="blurInUp"
                 by="character"
                 duration={0.5}

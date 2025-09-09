@@ -42,7 +42,7 @@ interface ProjectGridProps {
 export function ProjectGrid({ 
   projects, 
   className = "", 
-  gridClassName = "grid-cols-3 auto-rows-[20rem] gap-4" 
+  gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[16rem] sm:auto-rows-[18rem] lg:auto-rows-[20rem] gap-3 sm:gap-4" 
 }: ProjectGridProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -85,15 +85,15 @@ export function ProjectGrid({
       <Modal 
         isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)}
-        className="w-[60%] h-[90vh] max-w-[95vw] min-w-[400px]"
+        className="w-[95vw] sm:w-[85vw] md:w-[75vw] lg:w-[60%] h-[90vh] max-w-[95vw] min-w-[320px]"
       >
         {selectedProject ? (
           <div className="flex flex-col h-full">
             {/* Header Section */}
-            <div className="border-b border-border/20 p-8 pb-6">
-              <div className="flex items-start justify-between gap-6">
+            <div className="border-b border-border/20 p-4 sm:p-6 lg:p-8 pb-4 sm:pb-6">
+              <div className="flex flex-col sm:flex-row items-start justify-between gap-4 sm:gap-6">
                 <div className="flex-1">
-                  <h2 className="text-3xl font-bold mb-3 leading-tight">{selectedProject.name}</h2>
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 leading-tight">{selectedProject.name}</h2>
                   {selectedProject.status && (
                     <div className="mb-4">
                       <span className="inline-flex items-center rounded-full bg-emerald-500/15 px-3 py-1 text-sm font-medium text-emerald-600 ring-1 ring-inset ring-emerald-500/20">
@@ -103,25 +103,27 @@ export function ProjectGrid({
                   )}
                 </div>
                 {/* Project Icon */}
-                <div className={`p-4 rounded-xl ${(selectedProject.background as any).color} bg-opacity-20`}>
+                <div className={`p-3 sm:p-4 rounded-xl ${(selectedProject.background as any).color} bg-opacity-20 self-center sm:self-start`}>
                   {(() => {
                     const IconComponent = iconMap[selectedProject.icon as keyof typeof iconMap];
-                    return <IconComponent className="h-8 w-8 text-foreground" />;
+                    return <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-foreground" />;
                   })()}
                 </div>
               </div>
             </div>
 
             {/* Quick Links Section */}
-            <div className="border-b border-border/20 p-8 py-6">
-              <div className="flex flex-wrap gap-3">
-                {/* Primary Action Button */}
-                <Button asChild variant="default" size="sm">
-                  <a href={selectedProject.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    {selectedProject.cta}
-                    <ArrowRightIcon className="h-4 w-4" />
-                  </a>
-                </Button>
+            <div className="border-b border-border/20 p-4 sm:p-6 lg:p-8 py-4 sm:py-6">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
+                {/* Primary Action Button - Only show if CTA is provided */}
+                {selectedProject.cta && (
+                  <Button asChild variant="default" size="sm">
+                    <a href={selectedProject.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      {selectedProject.cta}
+                      <ArrowRightIcon className="h-4 w-4" />
+                    </a>
+                  </Button>
+                )}
                 
                 {/* GitHub Link (conditional) */}
                 {selectedProject.githubUrl && (
@@ -136,7 +138,7 @@ export function ProjectGrid({
                 )}
 
                 {/* Live Demo Link (conditional) */}
-                {selectedProject.liveUrl && (
+                {/* {selectedProject.liveUrl && (
                   <Button asChild variant="outline" size="sm">
                     <a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                       <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -145,7 +147,7 @@ export function ProjectGrid({
                       Live Demo
                     </a>
                   </Button>
-                )}
+                )} */}
 
                 {/* Instagram Link (conditional) */}
                 {selectedProject.instagramUrl && (
@@ -184,12 +186,12 @@ export function ProjectGrid({
             </div>
 
             {/* Main Content Section */}
-            <div className="flex-1 p-8 overflow-y-auto">
-              <div className="space-y-8">
+            <div className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+              <div className="space-y-6 sm:space-y-8">
                 {/* Project Description */}
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">About This Project</h3>
-                  <p className="text-muted-foreground leading-relaxed text-base">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">About This Project</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     {selectedProject.description}
                   </p>
                 </div>
@@ -197,12 +199,12 @@ export function ProjectGrid({
                 {/* Key Features */}
                 {selectedProject.keyFeatures && selectedProject.keyFeatures.length > 0 && (
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Key Features</h3>
-                    <div className="grid grid-cols-1 gap-3">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Key Features</h3>
+                    <div className="grid grid-cols-1 gap-2 sm:gap-3">
                       {selectedProject.keyFeatures.map((feature, index) => (
-                        <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50 border border-border/30">
-                          <div className="w-2 h-2 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></div>
-                          <span className="text-sm text-muted-foreground">{feature}</span>
+                        <div key={index} className="flex items-start gap-3 p-2 sm:p-3 rounded-lg bg-muted/50 border border-border/30">
+                          <div className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 sm:mt-2 flex-shrink-0"></div>
+                          <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -212,10 +214,10 @@ export function ProjectGrid({
                 {/* Tech Stack */}
                 {selectedProject.techStack && selectedProject.techStack.length > 0 && (
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Technologies Used</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Technologies Used</h3>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.techStack.map((tech) => (
-                        <span key={tech} className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20">
+                        <span key={tech} className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-primary/10 text-primary rounded-full border border-primary/20">
                           {tech}
                         </span>
                       ))}

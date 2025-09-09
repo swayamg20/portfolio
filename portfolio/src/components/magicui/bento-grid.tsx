@@ -16,7 +16,7 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   Icon: React.ElementType;
   description: string;
   href: string;
-  cta: string;
+  cta?: string;
   status?: string;
 }
 
@@ -74,9 +74,31 @@ const BentoCard = ({
         <p className="max-w-lg text-white/80 truncate">{description}</p>
       </div>
 
+      {cta && (
+        <div
+          className={cn(
+            "lg:hidden flex w-full translate-y-0 transform-gpu flex-row items-center transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
+          )}
+        >
+          <Button
+            variant="link"
+            asChild
+            size="sm"
+            className="p-0"
+          >
+            <a href={href} onClick={(e) => e.stopPropagation()}>
+              {cta}
+              <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
+            </a>
+          </Button>
+        </div>
+      )}
+    </div>
+
+    {cta && (
       <div
         className={cn(
-          "lg:hidden flex w-full translate-y-0 transform-gpu flex-row items-center transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
+          "hidden lg:flex absolute bottom-0 w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
         )}
       >
         <Button
@@ -91,25 +113,7 @@ const BentoCard = ({
           </a>
         </Button>
       </div>
-    </div>
-
-    <div
-      className={cn(
-        "hidden lg:flex absolute bottom-0 w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
-      )}
-    >
-      <Button
-        variant="link"
-        asChild
-        size="sm"
-        className="p-0"
-      >
-        <a href={href} onClick={(e) => e.stopPropagation()}>
-          {cta}
-          <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
-        </a>
-      </Button>
-    </div>
+    )}
 
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
   </div>

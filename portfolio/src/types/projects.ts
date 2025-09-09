@@ -13,7 +13,7 @@ export interface Project {
   name: string;
   description: string;
   href: string;
-  cta: string;
+  cta?: string;
   className: string;
   background: ProjectBackground;
   icon: string;

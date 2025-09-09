@@ -22,19 +22,25 @@ const Icons = {
   ),
   experience: (props: IconProps) => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M20 7h-9a2 2 0 0 1-2-2V2a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M16 3v4H8V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M8 11h8M8 15h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   ),
   projects: (props: IconProps) => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M2 17l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   ),
   skills: (props: IconProps) => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 21c0-1-1-3-3-3s-3 2-3 3 1 3 3 3 3-2 3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 3c0 1 1 3 3 3s3-2 3-3-1-3-3-3-3 2-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   ),
   blogs: (props: IconProps) => (
@@ -184,7 +190,7 @@ export function MainNavigationDock() {
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 z-50">
       <TooltipProvider>
-        <Dock direction="middle" className="px-4 py-3 gap-6">
+        <Dock direction="middle" className="px-3 sm:px-4 py-2 sm:py-3 gap-3 sm:gap-6">
           {NAVIGATION_DATA.pages.map((page) => {
             const sectionId = page.href.replace('#', '');
             const isActive = activeSection === sectionId;
@@ -197,13 +203,13 @@ export function MainNavigationDock() {
                       aria-label={page.label}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-10 rounded-full transition-all duration-200",
+                        "size-8 sm:size-10 rounded-full transition-all duration-200",
                         isActive 
                           ? "bg-primary text-primary-foreground shadow-md scale-105" 
                           : "hover:bg-secondary/80"
                       )}
                     >
-                      <page.icon className="size-5" />
+                      <page.icon className="size-4 sm:size-5" />
                     </button>
                   </TooltipTrigger>
                   <TooltipContent>
@@ -222,9 +228,9 @@ export function MainNavigationDock() {
 // Social & Theme Navigation Dock (Right)
 export function SocialNavigationDock() {
   return (
-    <div className="fixed top-1/2 right-4 -translate-y-1/2 z-50">
+    <div className="fixed top-1/2 right-2 sm:right-4 -translate-y-1/2 z-50">
       <TooltipProvider>
-        <Dock direction="middle" className="flex-col py-4 px-3 gap-0" iconSize={36} iconMagnification={48}>
+        <Dock direction="middle" className="flex-col py-3 sm:py-4 px-2 sm:px-3 gap-0" iconSize={30} iconMagnification={40}>
           {/* Social Links */}
           {NAVIGATION_DATA.social.map((social) => (
             <DockIcon 
@@ -245,7 +251,7 @@ export function SocialNavigationDock() {
                     aria-label={social.name}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-9 rounded-full hover:bg-secondary/80 transition-all duration-200 cursor-pointer",
+                      "size-7 sm:size-9 rounded-full hover:bg-secondary/80 transition-all duration-200 cursor-pointer",
                     )}
                   >
                     <Link
@@ -254,13 +260,13 @@ export function SocialNavigationDock() {
                       target={social.url.startsWith('http') ? '_blank' : undefined}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-10 rounded-full transition-all duration-200",
+                        "size-8 sm:size-10 rounded-full transition-all duration-200",
                         // isActive 
                         //   ? "bg-primary text-primary-foreground shadow-md scale-105" 
                         //   : "hover:bg-secondary/80"
                       )}
                     >
-                    <social.icon className="size-4" />
+                    <social.icon className="size-3 sm:size-4" />
                     </Link>
                   </div>
                 </TooltipTrigger>
@@ -280,7 +286,7 @@ export function SocialNavigationDock() {
                 <AnimatedThemeToggler 
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-9 rounded-full hover:bg-secondary/80 transition-all duration-200 cursor-pointer",
+                    "size-7 sm:size-9 rounded-full hover:bg-secondary/80 transition-all duration-200 cursor-pointer",
                   )}
                 />
               </TooltipTrigger>
