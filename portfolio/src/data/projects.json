@@ -2,16 +2,30 @@
   "projects": [
     
     {
-      "id": "reel2trip-ixigo-hackweek-25",
-      "name": "Reel2Trip (ixigo Hackweek ’25)",
-      "description": "Video-to-itinerary AI (Gemini/GPT-4), IG DM webhooks, 70% cost cut, ZEP chat",
+      "id": "macos-intelligence-mcp-framework",
+      "name": "macOS Intelligence MCP Framework",
+      "description": "Comprehensive macOS automation framework with 5 MCP servers: screen intelligence with native OCR, system control via AppleScript/RobotJS, power management with battery optimization, usage analytics with local SQLite, and Apple Shortcuts automation with natural language creation. Privacy-first with local data storage and Claude Desktop integration.",
       "href": "#",
-      "cta": "Live",
-      "status": "Production",
-      "className": "col-span-1 row-span-1",
+      "cta": "GitHub",
+      "status": "Open Source",
+      "className": "col-span-2 row-span-1",
       "background": {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1502920917128-1aa500764b8a?q=80&w=1600&auto=format&fit=crop"
+        "type": "solid",
+        "color": "bg-purple-300 dark:bg-purple-700"
+      },
+      "icon": "CodeIcon"
+    },
+    {
+      "id": "reel2trip-ixigo-hackweek-25",
+      "name": "Reel2Trip (ixigo Hackweek '25)",
+      "description": "AI-powered travel itinerary generator that transforms Instagram Reels and YouTube Shorts into personalized travel plans. Features Instagram DM integration, smart destination identification, day-wise activity planning, flight recommendations, and chat-based customization with MILO bot. Built with Gemini/GPT-4 AI, reducing manual planning effort by 70% while seamlessly integrating into ixigo's flight booking ecosystem.",
+      "href": "#",
+      "cta": "View Demo",
+      "status": "Production",
+      "className": "col-span-2 row-span-1",
+      "background": {
+        "type": "solid",
+        "color": "bg-blue-300 dark:bg-blue-700"
       },
       "icon": "RocketIcon"
     },
@@ -24,8 +38,8 @@
       "status": "Open Source",
       "className": "col-span-1 row-span-1",
       "background": {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
+        "type": "solid",
+        "color": "bg-emerald-300 dark:bg-emerald-700"
       },
       "icon": "CodeIcon"
     },
@@ -38,8 +52,8 @@
       "status": "POC",
       "className": "col-span-2 row-span-1",
       "background": {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1589254065878-42c9da997008?q=80&w=1600&auto=format&fit=crop"
+        "type": "solid",
+        "color": "bg-amber-300 dark:bg-amber-700"
       },
        "icon": "ChatBubbleIcon"
     },
@@ -53,8 +67,8 @@
       "status": "Awarded",
       "className": "col-span-1 row-span-1",
       "background": {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?q=80&w=1600&auto=format&fit=crop"
+        "type": "solid",
+        "color": "bg-pink-300 dark:bg-pink-700"
       },
       "icon": "LightningBoltIcon"
     },
@@ -67,8 +81,8 @@
       "status": "Academic",
       "className": "col-span-2 row-span-1",
       "background": {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1600&auto=format&fit=crop"
+        "type": "solid",
+        "color": "bg-indigo-300 dark:bg-indigo-700"
       },
       "icon": "CodeIcon"
     },
@@ -81,8 +95,8 @@
       "status": "Academic",
       "className": "col-span-1 row-span-1",
       "background": {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1600&auto=format&fit=crop"
+        "type": "solid",
+        "color": "bg-cyan-300 dark:bg-cyan-700"
       },
       "icon": "MagicWandIcon"
     },
@@ -95,8 +109,8 @@
       "status": "live",
       "className": "col-span-2 row-span-1",
       "background": {
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1502920917128-1aa500764b8a?q=80&w=1600&auto=format&fit=crop"
+        "type": "solid",
+        "color": "bg-teal-300 dark:bg-teal-700"
       },
       "icon": "GlobeIcon"
     }

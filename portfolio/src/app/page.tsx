@@ -69,16 +69,24 @@ export default function Home() {
               
               <TextAnimate
                 className="text-lg text-muted-foreground max-w-xl leading-relaxed"
-                animation="blurInUp" by="character" once duration={0.5}
+                animation="blurInUp" by="line" once duration={0.5}
               >
                 A Full Stack Engineer, Building AI Products
               </TextAnimate>
               <TextAnimate
                 className="text-lg text-muted-foreground max-w-xl leading-relaxed"
-                animation="blurInUp" by="character" once duration={0.5}
+                animation="blurInUp" by="line" once duration={0.5}
               >
-                Currently hooked up with conversational voice agents
+                Currently hooked up with conversational voice agents.
               </TextAnimate>
+
+              <TextAnimate
+                className="text-lg text-muted-foreground max-w-xl leading-relaxed"
+                animation="blurInUp" by="line" once duration={0.5}
+              >
+                I am a 2024 batch graduate from IIT Kanpur, with a degree in Materials Science and Engineering, but interests in tech. Currently working as a Software Engineer 2 at ixigo, AI Products.
+              </TextAnimate>
+
               
               {/* Resume Button */}
               <div className="mt-8">
@@ -92,7 +100,7 @@ export default function Home() {
             </div>
 
             {/* Right Side - Recent Updates Section (40% width) */}
-            <div className="w-[40%] h-[500px] ml-8">
+            {/* <div className="w-[40%] h-[500px] ml-8">
               <div className="h-full rounded-2xl backdrop-blur-md bg-background/80 border border-border shadow-xl p-6 flex flex-col">
                 <TextAnimate
                   className="text-2xl font-semibold text-foreground mb-6 text-center"
@@ -183,14 +191,13 @@ export default function Home() {
                   })}
                 </div>
                 
-                {/* Last Updated */}
                 <div className="mt-4 pt-4 border-t border-border/50">
                   <div className="text-xs text-muted-foreground text-center">
                     Last updated: {new Date(updatesData.lastUpdated).toLocaleDateString()}
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -220,7 +227,7 @@ export default function Home() {
       <PDFModal
         isOpen={isResumeModalOpen}
         onClose={() => setIsResumeModalOpen(false)}
-        pdfUrl="/portolio/resume.pdf"
+        pdfUrl="/portfolio/resume.pdf"
         title="Swayam Gupta - Resume"
         githubUrl="https://github.com/swayamg20/resume"
         driveUrl="https://drive.google.com/file/d/13r_8pPvV9I1T3d6l489x7d2-fT7-ZVQq/view?usp=sharing"

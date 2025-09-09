@@ -6,6 +6,17 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    // Project background pastel colors
+    'bg-purple-300', 'dark:bg-purple-700',
+    'bg-blue-300', 'dark:bg-blue-700',
+    'bg-emerald-300', 'dark:bg-emerald-700',
+    'bg-amber-300', 'dark:bg-amber-700',
+    'bg-pink-300', 'dark:bg-pink-700',
+    'bg-indigo-300', 'dark:bg-indigo-700',
+    'bg-cyan-300', 'dark:bg-cyan-700',
+    'bg-teal-300', 'dark:bg-teal-700',
+  ],
   theme: {
   	extend: {
   		colors: {

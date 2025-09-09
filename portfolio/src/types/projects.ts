@@ -1,8 +1,7 @@
 export type ProjectBackground =
   | {
-      type: 'gradient';
-      from: string;
-      to: string;
+      type: 'solid';
+      color: string;
     }
   | {
       type: 'image';

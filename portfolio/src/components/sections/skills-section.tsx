@@ -28,7 +28,7 @@ export function SkillsSection() {
                 startOnView={true}
                 once={true}
               >
-                Skills & Expertise
+                Skills
               </TextAnimate>
               <TextAnimate
                 className="text-lg text-muted-foreground"
@@ -38,7 +38,7 @@ export function SkillsSection() {
                 startOnView={true}
                 once={true}
               >
-                Technologies I work with
+                Technologies I've worked with
               </TextAnimate>
             </div>
 
