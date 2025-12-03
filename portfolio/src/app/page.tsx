@@ -232,7 +232,7 @@ export default function Home() {
         pdfUrl="/portfolio/resume.pdf"
         title="Swayam Gupta - Resume"
         githubUrl="https://github.com/swayamg20/resume"
-        driveUrl="https://drive.google.com/file/d/1CU8UyT4MszDFSB2w6xXv1qpi-8pAc4uy/view?usp=sharing"
+        driveUrl="https://drive.google.com/file/d/1uVRD2kJMnY5RKq6rd0GsUepVk2lezWUc/view"
       />
 
       {/* Scroll to Top Button */}
