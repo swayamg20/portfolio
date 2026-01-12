@@ -6,11 +6,11 @@ import { Project } from "@/types/projects";
 import { Modal } from "@/components/ui/modal";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { 
-  CodeIcon, 
-  GlobeIcon, 
-  MobileIcon, 
-  RocketIcon, 
+import {
+  CodeIcon,
+  GlobeIcon,
+  MobileIcon,
+  RocketIcon,
   LightningBoltIcon,
   HeartIcon,
   StarIcon,

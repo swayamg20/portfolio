@@ -1,6 +1,45 @@
 {
   "projects": [
-    
+    {
+      "id": "voice-ai-realtime-assistant",
+      "name": "Voice AI - Real-time Voice Assistant",
+      "description": "Architected a production-grade real-time voice assistant platform with sub-100ms interruption detection and low-latency audio pipeline. Built enterprise WebRTC-based system integrating Speech-to-Text, Voice Activity Detection, LLM processing, and Text-to-Speech in a seamless streaming architecture. Implemented advanced interruption handling with server-side VAD detection, sandboxed tool execution system, and persistent memory management. Developed modular pipeline architecture supporting both voice and chat sessions with visual canvas mode for rich UI interactions.",
+      "href": "#",
+      "status": "In Development",
+      "className": "col-span-1 row-span-1",
+      "background": {
+        "type": "solid",
+        "color": "bg-blue-300 dark:bg-blue-700"
+      },
+      "icon": "ChatBubbleIcon",
+      "keyFeatures": [
+        "Sub-100ms interruption detection with automatic TTS cancellation",
+        "Real-time audio pipeline: STT → VAD → LLM → TTS streaming",
+        "WebRTC-based low-latency audio streaming with datachannel messaging",
+        "Silero VAD v6 integration for robust speech detection",
+        "Sandboxed tool execution system with RestrictedPython",
+        "Persistent memory system with mem0ai integration",
+        "Visual canvas mode supporting multiple widget types",
+        "Modular architecture with independent pipeline components",
+        "Multi-provider support (Deepgram, OpenAI, ElevenLabs)",
+        "Automatic context management and token limit handling"
+      ],
+      "techStack": [
+        "Python",
+        "FastAPI",
+        "WebRTC",
+        "aiortc",
+        "Deepgram STT",
+        "ElevenLabs TTS",
+        "Silero VAD",
+        "OpenAI GPT-4",
+        "SQLite",
+        "mem0ai",
+        "RestrictedPython",
+        "Async/Await"
+      ],
+      "githubUrl": "https://github.com/swayamg20/vad-based-conv-ai"
+    },
     {
       "id": "macos-intelligence-mcp-framework",
       "name": "macOS Intelligence MCP Framework",
@@ -51,71 +90,6 @@
       "instagramUrl": "https://instagram.com/planbyixigo"
     },
     {
-      "id": "voice-ai-realtime-assistant",
-      "name": "Voice AI - Real-time Voice Assistant",
-      "description": "Architected a production-grade real-time voice assistant platform with sub-100ms interruption detection and low-latency audio pipeline. Built enterprise WebRTC-based system integrating Speech-to-Text, Voice Activity Detection, LLM processing, and Text-to-Speech in a seamless streaming architecture. Implemented advanced interruption handling with server-side VAD detection, sandboxed tool execution system, and persistent memory management. Developed modular pipeline architecture supporting both voice and chat sessions with visual canvas mode for rich UI interactions.",
-      "href": "#",
-      "status": "In Development",
-      "className": "col-span-1 row-span-1",
-      "background": {
-        "type": "solid",
-        "color": "bg-blue-300 dark:bg-blue-700"
-      },
-      "icon": "MicrophoneIcon",
-      "keyFeatures": [
-        "Sub-100ms interruption detection with automatic TTS cancellation",
-        "Real-time audio pipeline: STT → VAD → LLM → TTS streaming",
-        "WebRTC-based low-latency audio streaming with datachannel messaging",
-        "Silero VAD v6 integration for robust speech detection",
-        "Sandboxed tool execution system with RestrictedPython",
-        "Persistent memory system with mem0ai integration",
-        "Visual canvas mode supporting multiple widget types",
-        "Modular architecture with independent pipeline components",
-        "Multi-provider support (Deepgram, OpenAI, ElevenLabs)",
-        "Automatic context management and token limit handling"
-      ],
-      "techStack": [
-        "Python",
-        "FastAPI",
-        "WebRTC",
-        "aiortc",
-        "Deepgram STT",
-        "ElevenLabs TTS",
-        "Silero VAD",
-        "OpenAI GPT-4",
-        "SQLite",
-        "mem0ai",
-        "RestrictedPython",
-        "Async/Await"
-      ],
-      "githubUrl": "https://github.com/swayamg20/voiceai"
-    },
-    {
-      "id": "webrtc-voice-ai-poc",
-      "name": "WebRTC Voice AI - Real-time Conversational Agent",
-      "description": "Built a real-time voice AI proof-of-concept using WebRTC for low-latency audio streaming. Integrated Deepgram for live Hindi transcription, OpenAI GPT-3.5 for conversational responses, and AWS Polly for neural voice synthesis. Implemented MediaSoup for optimized WebRTC transport with performance monitoring and latency tracking across the entire pipeline.",
-      "href": "#",
-      "status": "POC",
-      "className": "col-span-2 row-span-1",
-      "background": {
-        "type": "solid",
-        "color": "bg-amber-300 dark:bg-amber-700"
-      },
-       "icon": "ChatBubbleIcon",
-      "keyFeatures": [
-        "Real-time WebRTC audio streaming",
-        "Live Hindi transcription with Deepgram",
-        "GPT-3.5 conversational AI responses",
-        "AWS Polly neural voice synthesis",
-        "MediaSoup optimized transport",
-        "Performance monitoring and latency tracking",
-        "Low-latency end-to-end pipeline"
-      ],
-      "techStack": ["WebRTC", "MediaSoup", "Deepgram", "OpenAI GPT-3.5", "AWS Polly", "Node.js", "React"],
-      "githubUrl": "https://github.com/swayamg20/webrtc-voice-ai"
-    },
-    {
-      
       "id": "isro-xray-burst-automation",
       "name": "ISRO X-Ray Burst Automation",
       "description": "Developed a comprehensive web-based automated system for identifying solar X-ray bursts using ReactJS framework with advanced data segregation features. Led end-to-end product documentation, user journey design, and research orchestration. Organized curve data management through React hooks and JSON structures for seamless API integration. Achieved Silver Medal in Inter IIT mid-prep event, contributing to IIT Kanpur's 2nd position overall.",
