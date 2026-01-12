@@ -51,29 +51,44 @@
       "instagramUrl": "https://instagram.com/planbyixigo"
     },
     {
-      "id": "auth-mcp-oauth-framework",
-      "name": "Auth MCP OAuth Framework",
-      "description": "Architected a production-ready OAuth 2.0 framework for MCP servers, reducing implementation complexity by 90% for developer experience. Built enterprise authentication system with PKCE flow, AES-256 encryption, automated token refresh, and multi-provider support. Published open-source npm package with comprehensive documentation, TypeScript definitions, and developer-friendly APIs following modular architecture. Led end-to-end development of first-to-market OAuth solution for MCP ecosystem, establishing production standards and compatibility.",
+      "id": "voice-ai-realtime-assistant",
+      "name": "Voice AI - Real-time Voice Assistant",
+      "description": "Architected a production-grade real-time voice assistant platform with sub-100ms interruption detection and low-latency audio pipeline. Built enterprise WebRTC-based system integrating Speech-to-Text, Voice Activity Detection, LLM processing, and Text-to-Speech in a seamless streaming architecture. Implemented advanced interruption handling with server-side VAD detection, sandboxed tool execution system, and persistent memory management. Developed modular pipeline architecture supporting both voice and chat sessions with visual canvas mode for rich UI interactions.",
       "href": "#",
-      "status": "Open Source",
+      "status": "In Development",
       "className": "col-span-1 row-span-1",
       "background": {
         "type": "solid",
-        "color": "bg-emerald-300 dark:bg-emerald-700"
+        "color": "bg-blue-300 dark:bg-blue-700"
       },
-      "icon": "CodeIcon",
+      "icon": "MicrophoneIcon",
       "keyFeatures": [
-        "90% reduction in implementation complexity for developers",
-        "Production-ready OAuth 2.0 framework for MCP servers",
-        "Enterprise authentication with PKCE security flow",
-        "AES-256 token encryption and automated refresh",
-        "Multi-provider support with modular architecture",
-        "Comprehensive TypeScript definitions and documentation",
-        "First-to-market OAuth solution for MCP ecosystem",
-        "Established production standards and compatibility"
+        "Sub-100ms interruption detection with automatic TTS cancellation",
+        "Real-time audio pipeline: STT → VAD → LLM → TTS streaming",
+        "WebRTC-based low-latency audio streaming with datachannel messaging",
+        "Silero VAD v6 integration for robust speech detection",
+        "Sandboxed tool execution system with RestrictedPython",
+        "Persistent memory system with mem0ai integration",
+        "Visual canvas mode supporting multiple widget types",
+        "Modular architecture with independent pipeline components",
+        "Multi-provider support (Deepgram, OpenAI, ElevenLabs)",
+        "Automatic context management and token limit handling"
       ],
-      "techStack": ["TypeScript", "OAuth 2.0", "PKCE", "AES-256", "Node.js", "MCP Protocol", "NPM", "Enterprise Security"],
-      "githubUrl": "https://github.com/swayamg20/mcp-framework"
+      "techStack": [
+        "Python",
+        "FastAPI",
+        "WebRTC",
+        "aiortc",
+        "Deepgram STT",
+        "ElevenLabs TTS",
+        "Silero VAD",
+        "OpenAI GPT-4",
+        "SQLite",
+        "mem0ai",
+        "RestrictedPython",
+        "Async/Await"
+      ],
+      "githubUrl": "https://github.com/swayamg20/voiceai"
     },
     {
       "id": "webrtc-voice-ai-poc",
